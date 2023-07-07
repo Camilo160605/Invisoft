@@ -6,6 +6,7 @@ import java.util.List;
 public class Controladora {
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
 
+
     public void guardar(String nombreCliente, String celuCliente, String correoCli, String direcCliente, String docCliente, String tipoDocumentoCliente) {
         Cliente cli = new Cliente();
         cli.setCorreo_cliente(correoCli);
@@ -42,7 +43,20 @@ public class Controladora {
         controlPersis.modificarCliente(cli);
         
         
+    } 
+
+    public void guardarprov(String nombProveedor, String celProveedor, String correoProv, String direcProveedor, String docProveedor, String tipoDocumentoProveedor) {
+        Proveedor prov = new Proveedor();
+        prov.setnombProveedor(nombProveedor);
+        prov.setcelProveedor(celProveedor);
+        prov.setcorreoProv(correoProv);
+        prov.setdirecProveedor(direcProveedor);
+        prov.setdocProveedor(docProveedor);
+        prov.settipoDocumentoProveedor(tipoDocumentoProveedor);
+        
+        controlPersis.guardarprov(prov); 
     }
+
 
     public void revisarCuenta(String usuarioLogin, String contraUsuario) {
         
@@ -50,3 +64,7 @@ public class Controladora {
     
     
 }
+
+   
+
+
