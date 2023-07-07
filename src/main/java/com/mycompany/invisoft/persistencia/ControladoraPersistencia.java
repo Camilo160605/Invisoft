@@ -37,4 +37,6 @@ public class ControladoraPersistencia {
         }
     }
     
+    UserJpaController usuJpa = new UserJpaController();
+    
 }

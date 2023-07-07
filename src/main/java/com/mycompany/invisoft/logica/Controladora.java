@@ -43,6 +43,10 @@ public class Controladora {
         
         
     }
+
+    public void revisarCuenta(String usuarioLogin, String contraUsuario) {
+        
+    }
     
     
 }
