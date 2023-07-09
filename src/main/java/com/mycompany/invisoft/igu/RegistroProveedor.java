@@ -38,6 +38,7 @@ public class RegistroProveedor extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setBackground(new java.awt.Color(51, 0, 255));
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel1.setText("Registro de Proveedor");
 
@@ -138,7 +139,9 @@ public class RegistroProveedor extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel8.setText("Telefono");
 
+        btnGuardarRegProveedor.setBackground(new java.awt.Color(0, 0, 255));
         btnGuardarRegProveedor.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        btnGuardarRegProveedor.setForeground(new java.awt.Color(255, 255, 255));
         btnGuardarRegProveedor.setText("Guardar");
         btnGuardarRegProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

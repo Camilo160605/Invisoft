@@ -93,6 +93,7 @@ public class Proveedores extends javax.swing.JFrame {
         jButton7.setText("Reportes");
 
         jButton8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(0, 0, 255));
         jButton8.setText("Proveedores");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,7 +157,10 @@ public class Proveedores extends javax.swing.JFrame {
                     .addContainerGap(174, Short.MAX_VALUE)))
         );
 
+        jPanel2.setBackground(new java.awt.Color(0, 0, 255));
+
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Proveedores");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -176,7 +180,9 @@ public class Proveedores extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
+        btnRegistroProveedor.setBackground(new java.awt.Color(0, 0, 255));
         btnRegistroProveedor.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnRegistroProveedor.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistroProveedor.setText("Añadir Proveedor");
         btnRegistroProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,7 +201,9 @@ public class Proveedores extends javax.swing.JFrame {
             }
         });
 
+        btnEditarProveedor.setBackground(new java.awt.Color(0, 0, 255));
         btnEditarProveedor.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnEditarProveedor.setForeground(new java.awt.Color(255, 255, 255));
         btnEditarProveedor.setText("Editar");
         btnEditarProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

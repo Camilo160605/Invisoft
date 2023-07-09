@@ -69,7 +69,10 @@ public class Clientes extends javax.swing.JFrame {
             }
         });
 
+        jPanel2.setBackground(new java.awt.Color(0, 0, 255));
+
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Clientes");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -88,6 +91,8 @@ public class Clientes extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addContainerGap(30, Short.MAX_VALUE))
         );
+
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel3.setText("INVISOFT");
@@ -115,6 +120,7 @@ public class Clientes extends javax.swing.JFrame {
         });
 
         btnClientesInicio.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnClientesInicio.setForeground(new java.awt.Color(0, 0, 255));
         btnClientesInicio.setText("Clientes");
         btnClientesInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,7 +183,7 @@ public class Clientes extends javax.swing.JFrame {
                             .addComponent(btnInicioInvi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnClientesInicio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING)))
-                    .addContainerGap(49, Short.MAX_VALUE)))
+                    .addContainerGap(59, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,7 +211,9 @@ public class Clientes extends javax.swing.JFrame {
                     .addContainerGap(174, Short.MAX_VALUE)))
         );
 
+        btnShowRegistroCliente.setBackground(new java.awt.Color(0, 0, 255));
         btnShowRegistroCliente.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnShowRegistroCliente.setForeground(new java.awt.Color(255, 255, 255));
         btnShowRegistroCliente.setText("Añadir Cliente");
         btnShowRegistroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -259,7 +267,9 @@ public class Clientes extends javax.swing.JFrame {
             }
         });
 
+        btnEditarClientes.setBackground(new java.awt.Color(0, 0, 255));
         btnEditarClientes.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnEditarClientes.setForeground(new java.awt.Color(255, 255, 255));
         btnEditarClientes.setText("Editar");
         btnEditarClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

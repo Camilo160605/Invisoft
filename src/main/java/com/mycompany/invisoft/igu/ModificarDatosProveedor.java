@@ -56,6 +56,7 @@ public class ModificarDatosProveedor extends javax.swing.JPanel {
 
         label3.setText("label3");
 
+        jLabel6.setBackground(new java.awt.Color(0, 0, 255));
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel6.setText("Modificacion de Datos");
 
@@ -151,7 +152,9 @@ public class ModificarDatosProveedor extends javax.swing.JPanel {
             }
         });
 
+        btnGuardarRegProveedor.setBackground(new java.awt.Color(0, 0, 255));
         btnGuardarRegProveedor.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        btnGuardarRegProveedor.setForeground(new java.awt.Color(255, 255, 255));
         btnGuardarRegProveedor.setText("Guardar Cambios");
         btnGuardarRegProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,10 +175,6 @@ public class ModificarDatosProveedor extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(209, 209, 209)
-                .addComponent(jLabel6)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(134, 134, 134)
@@ -192,19 +191,25 @@ public class ModificarDatosProveedor extends javax.swing.JPanel {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(264, 264, 264))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(btnLimpiarRegProveedor1)
-                .addGap(88, 88, 88)
-                .addComponent(btnGuardarRegProveedor)
-                .addGap(98, 98, 98)
-                .addComponent(btnCancelarRegProveedor)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(btnLimpiarRegProveedor1)
+                        .addGap(88, 88, 88)
+                        .addComponent(btnGuardarRegProveedor)
+                        .addGap(98, 98, 98)
+                        .addComponent(btnCancelarRegProveedor))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(213, 213, 213)
+                        .addComponent(jLabel6)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel6)
-                .addGap(26, 26, 26)
+                .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
