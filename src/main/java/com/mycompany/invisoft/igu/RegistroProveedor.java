@@ -143,6 +143,7 @@ public class RegistroProveedor extends javax.swing.JFrame {
         btnGuardarRegProveedor.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnGuardarRegProveedor.setForeground(new java.awt.Color(255, 255, 255));
         btnGuardarRegProveedor.setText("Guardar");
+        btnGuardarRegProveedor.setBorderPainted(false);
         btnGuardarRegProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarRegProveedorActionPerformed(evt);

@@ -153,6 +153,7 @@ public class Principal extends javax.swing.JFrame {
         btnGuardarRegCliente.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnGuardarRegCliente.setForeground(new java.awt.Color(255, 255, 255));
         btnGuardarRegCliente.setText("Guardar");
+        btnGuardarRegCliente.setBorderPainted(false);
         btnGuardarRegCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarRegClienteActionPerformed(evt);

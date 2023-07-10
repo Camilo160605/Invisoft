@@ -184,6 +184,7 @@ public class Proveedores extends javax.swing.JFrame {
         btnRegistroProveedor.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnRegistroProveedor.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistroProveedor.setText("Añadir Proveedor");
+        btnRegistroProveedor.setBorderPainted(false);
         btnRegistroProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistroProveedorActionPerformed(evt);
@@ -205,6 +206,7 @@ public class Proveedores extends javax.swing.JFrame {
         btnEditarProveedor.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnEditarProveedor.setForeground(new java.awt.Color(255, 255, 255));
         btnEditarProveedor.setText("Editar");
+        btnEditarProveedor.setBorderPainted(false);
         btnEditarProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarProveedorActionPerformed(evt);

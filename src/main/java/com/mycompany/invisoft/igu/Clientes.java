@@ -215,6 +215,7 @@ public class Clientes extends javax.swing.JFrame {
         btnShowRegistroCliente.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnShowRegistroCliente.setForeground(new java.awt.Color(255, 255, 255));
         btnShowRegistroCliente.setText("Añadir Cliente");
+        btnShowRegistroCliente.setBorderPainted(false);
         btnShowRegistroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnShowRegistroClienteActionPerformed(evt);
@@ -271,6 +272,7 @@ public class Clientes extends javax.swing.JFrame {
         btnEditarClientes.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnEditarClientes.setForeground(new java.awt.Color(255, 255, 255));
         btnEditarClientes.setText("Editar");
+        btnEditarClientes.setBorderPainted(false);
         btnEditarClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarClientesActionPerformed(evt);
