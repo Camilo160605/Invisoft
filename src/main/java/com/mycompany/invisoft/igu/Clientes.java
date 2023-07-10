@@ -447,7 +447,10 @@ public class Clientes extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        Proveedores vistaprov = new Proveedores();
+        vistaprov.setVisible(true);
+        vistaprov.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void btnEliminarListaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarListaClienteActionPerformed

@@ -324,6 +324,7 @@ public class ModificarDatosCliente extends javax.swing.JFrame {
         Clientes client = new Clientes();
         client.setVisible(true);
         client.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnCancelarRegClientesActionPerformed
 
 

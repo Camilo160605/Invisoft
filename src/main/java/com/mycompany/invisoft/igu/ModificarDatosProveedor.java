@@ -261,9 +261,10 @@ public class ModificarDatosProveedor extends javax.swing.JPanel {
     }//GEN-LAST:event_btnGuardarRegProveedorActionPerformed
 
     private void btnCancelarRegProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarRegProveedorActionPerformed
-        Proveedores prov = new Proveedores();
-        prov.setVisible(true);
-        prov.setLocationRelativeTo(null);
+        Proveedores vistaProv = new Proveedores();
+        vistaProv.setVisible(true);
+        vistaProv.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnCancelarRegProveedorActionPerformed
 
     private void txtNomProveedor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomProveedor1ActionPerformed
@@ -278,9 +279,6 @@ public class ModificarDatosProveedor extends javax.swing.JPanel {
 
     }//GEN-LAST:event_cmbTipoDocProveedor1ActionPerformed
 
-    void setLocationRelativeTo(Object object) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
