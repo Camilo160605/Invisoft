@@ -55,6 +55,7 @@ com\mycompany\invisoft\igu\Principal.class
 com\mycompany\invisoft\igu\InicioInvisoft$3.class
 com\mycompany\invisoft\igu\Proveedores$2.class
 com\mycompany\invisoft\igu\ModificarDatosCliente$2.class
+com\mycompany\invisoft\igu\Ventas.class
 com\mycompany\invisoft\igu\Principal$7.class
 com\mycompany\invisoft\igu\ModificarDatosCliente$6.class
 com\mycompany\invisoft\igu\Clientes$10.class
@@ -67,6 +68,7 @@ com\mycompany\invisoft\igu\RegistroProveedor$4.class
 com\mycompany\invisoft\igu\ModificarDatosCliente.class
 com\mycompany\invisoft\igu\Clientes$4.class
 com\mycompany\invisoft\igu\ModificarDatosCliente$3.class
+com\mycompany\invisoft\igu\AñadirVentas.class
 com\mycompany\invisoft\igu\Proveedores$3.class
 com\mycompany\invisoft\igu\Clientes$7.class
 com\mycompany\invisoft\igu\InicioInvisoft$4.class

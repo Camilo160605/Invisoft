@@ -1,6 +1,7 @@
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\Invisoft.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\exceptions\PreexistingEntityException.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\InicioInvisoft.java
+C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\AñadirVentas.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\ModificarDatosProveedor.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\exceptions\NonexistentEntityException.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\Proveedores.java
@@ -18,3 +19,4 @@ C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\p
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\RegistroProveedor.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\ModificarDatosCliente.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\exceptions\IllegalOrphanException.java
+C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\Ventas.java

@@ -257,6 +257,11 @@ public class RegistroProveedor extends javax.swing.JFrame {
         JDialog dialog = optionPane.createDialog("Guardado Exitoso");
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);
+        
+        Proveedores vistaProv = new Proveedores();
+        vistaProv.setVisible(true);
+        vistaProv.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnGuardarRegProveedorActionPerformed
 
     private void btnCancelarRegProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarRegProveedorActionPerformed

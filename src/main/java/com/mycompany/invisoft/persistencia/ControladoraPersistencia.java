@@ -2,6 +2,7 @@ package com.mycompany.invisoft.persistencia;
 
 import com.mycompany.invisoft.logica.Cliente;
 import com.mycompany.invisoft.logica.Proveedor;
+import com.mycompany.invisoft.logica.User;
 import com.mycompany.invisoft.persistencia.exceptions.NonexistentEntityException;
 import java.util.List;
 import java.util.logging.Level;
@@ -43,6 +44,10 @@ public class ControladoraPersistencia {
     
     public void guardarprov(Proveedor prov) {
         proveedorjpa.create(prov);
+    }
+
+    public List<User> traerUsuarios() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

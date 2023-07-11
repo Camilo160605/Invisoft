@@ -265,7 +265,7 @@ public class ModificarDatosProveedor extends javax.swing.JPanel {
         Proveedores vistaProv = new Proveedores();
         vistaProv.setVisible(true);
         vistaProv.setLocationRelativeTo(null);
-        this.dispose();
+        //this.dispose();
     }//GEN-LAST:event_btnCancelarRegProveedorActionPerformed
 
     private void txtNomProveedor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomProveedor1ActionPerformed

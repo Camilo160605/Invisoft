@@ -47,20 +47,28 @@ public class Controladora {
 
     public void guardarprov(String nombProveedor, String celProveedor, String correoProv, String direcProveedor, String docProveedor, String tipoDocumentoProveedor) {
         Proveedor prov = new Proveedor();
-        prov.setnombProveedor(nombProveedor);
-        prov.setcelProveedor(celProveedor);
-        prov.setcorreoProv(correoProv);
-        prov.setdirecProveedor(direcProveedor);
-        prov.setdocProveedor(docProveedor);
-        prov.settipoDocumentoProveedor(tipoDocumentoProveedor);
+        prov.setNom_proveedor(nombProveedor);
+        prov.setTel_proveedor(celProveedor);
+        prov.setCorreo_proveedor(direcProveedor);
+        prov.setDirec_proveedor(direcProveedor);
+        prov.setDoc_proveedor(docProveedor);
+        prov.setTipo_doc_proveedor(tipoDocumentoProveedor);
         
         controlPersis.guardarprov(prov); 
     }
 
+//    public String revisarCuenta(String usuarioLogin, String contraUsuario) {
+//        
+////        List<User> listaUsuarios = controlPersis.traerUsuarios();
+////        
+////        for (User usu : listaUsuarios){
+////            if(usu.get)
+////        }
+//        
+//    }
 
-    public void revisarCuenta(String usuarioLogin, String contraUsuario) {
-        
-    }
+
+
     
     
 }

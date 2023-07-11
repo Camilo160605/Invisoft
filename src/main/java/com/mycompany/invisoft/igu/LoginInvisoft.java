@@ -184,10 +184,10 @@ public class LoginInvisoft extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUsuarioLoginActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//        String usuarioLogin = txtUsuarioLogin.getText();
-//        String contraUsuario = txtContraUsuario.getText();
-//        
-//        Control.revisarCuenta(usuarioLogin,contraUsuario);
+        String usuarioLogin = txtUsuarioLogin.getText();
+        String contraUsuario = txtContraUsuario.getText();
+        
+//        String mensaje = Control.revisarCuenta(usuarioLogin,contraUsuario);
           InicioInvisoft Iniciopapa = new InicioInvisoft();
           Iniciopapa.setVisible(true);
           Iniciopapa.setLocationRelativeTo(null);
