@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class ControladoraPersistencia {
     ClienteJpaController clientejpa = new ClienteJpaController();
-    ProveedorJpaController proveedorjpa = new ProveedorJpaController();
+    
 
     //CLIENTE
     public void guardar(Cliente cli) {
@@ -41,14 +41,14 @@ public class ControladoraPersistencia {
         }
     }
 
+    //PROVEEDOR
+    ProveedorJpaController proveedorjpa = new ProveedorJpaController(); 
     
     public void guardarprov(Proveedor prov) {
         proveedorjpa.create(prov);
     }
 
-    public List<User> traerUsuarios() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
     
 }
 
