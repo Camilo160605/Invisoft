@@ -2,6 +2,8 @@
 package com.mycompany.invisoft.igu;
 
 import com.mycompany.invisoft.logica.Controladora;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 
 public class LoginInvisoft extends javax.swing.JFrame {
@@ -186,12 +188,21 @@ public class LoginInvisoft extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String usuarioLogin = txtUsuarioLogin.getText();
         String contraUsuario = txtContraUsuario.getText();
+
+        String mensaje = Control.revisarCuenta(usuarioLogin,contraUsuario);
         
-//        String mensaje = Control.revisarCuenta(usuarioLogin,contraUsuario);
-          InicioInvisoft Iniciopapa = new InicioInvisoft();
-          Iniciopapa.setVisible(true);
-          Iniciopapa.setLocationRelativeTo(null);
-          this.dispose();
+        
+        if(mensaje.equals("Correcto")){
+            InicioInvisoft Iniciopapa = new InicioInvisoft();
+            Iniciopapa.setVisible(true);
+            Iniciopapa.setLocationRelativeTo(null);
+            this.dispose();
+        }
+        else{
+            txtUsuarioLogin.setText("");
+            txtContraUsuario.setText("");
+            mostrarMensaje("Usuario incorrecto","Error","Datos incorrectos");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
@@ -210,4 +221,17 @@ public class LoginInvisoft extends javax.swing.JFrame {
     private javax.swing.JPasswordField txtContraUsuario;
     private javax.swing.JTextField txtUsuarioLogin;
     // End of variables declaration//GEN-END:variables
+        public void mostrarMensaje (String mensaje,String tipo, String titulo){
+                JOptionPane optionPane = new JOptionPane (mensaje);
+                
+                if(tipo.equals("Info")){
+                optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                }
+                else if (tipo.equals("Error")){
+                optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+                }
+                JDialog dialog = optionPane.createDialog(titulo);
+                dialog.setAlwaysOnTop(true);
+                dialog.setVisible(true);
+    }
 }

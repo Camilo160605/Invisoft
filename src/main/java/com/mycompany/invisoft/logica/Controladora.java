@@ -4,8 +4,12 @@ import com.mycompany.invisoft.persistencia.ControladoraPersistencia;
 import java.util.List;
 
 public class Controladora {
-    ControladoraPersistencia controlPersis = new ControladoraPersistencia();
+    ControladoraPersistencia controlPersis;
 
+    public Controladora() {
+        controlPersis = new ControladoraPersistencia();
+    }
+    
 
     public void guardar(String nombreCliente, String celuCliente, String correoCli, String direcCliente, String docCliente, String tipoDocumentoCliente) {
         Cliente cli = new Cliente();
@@ -57,22 +61,24 @@ public class Controladora {
         controlPersis.guardarprov(prov); 
     }
 
-//    public String revisarCuenta(String usuarioLogin, String contraUsuario) {
-//        
-////        List<User> listaUsuarios = controlPersis.traerUsuarios();
-////        
-////        for (User usu : listaUsuarios){
-////            if(usu.get)
-////        }
-//        
-//    }
-
-
-
-    
-    
-}
-
-   
-
-
+   public String revisarCuenta(String usuarioLogin, String contraUsuario) {
+        String mensaje = "";
+        List<User> listaUsuarios = controlPersis.traerUsuarios();
+        for (User usu : listaUsuarios){
+            if(usu.getNombreUsuario().equals(usuarioLogin)){
+                if(usu.getContraseña().equals(contraUsuario)){
+                    mensaje = "Correcto";
+                    return mensaje;
+                }
+                else{
+                    mensaje = "ContraIncorrecta";
+                    return mensaje;
+                }               
+                }
+            else{
+                    mensaje = "noencontrado";    
+                }
+        }
+        return mensaje;
+    }
+}   

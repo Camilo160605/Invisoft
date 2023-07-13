@@ -45,9 +45,12 @@ public class ControladoraPersistencia {
     public void guardarprov(Proveedor prov) {
         proveedorjpa.create(prov);
     }
-
+    UserJpaController usuJpa = new UserJpaController();
     public List<User> traerUsuarios() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        List<User> listaUsuario = usuJpa.findUserEntities();
+        return listaUsuario;
+        //Select * User
+        
     }
     
 }
