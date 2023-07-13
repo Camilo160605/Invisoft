@@ -61,6 +61,7 @@ public class Controladora {
         controlPersis.guardarprov(prov); 
     }
 
+
    public String revisarCuenta(String usuarioLogin, String contraUsuario) {
         String mensaje = "";
         List<User> listaUsuarios = controlPersis.traerUsuarios();
@@ -81,4 +82,26 @@ public class Controladora {
         }
         return mensaje;
     }
+
+   
+   
+   
+   
+//    public String revisarCuenta(String usuarioLogin, String contraUsuario) {
+//        
+////        List<User> listaUsuarios = controlPersis.traerUsuarios();
+////        
+////        for (User usu : listaUsuarios){
+////            if(usu.get)
+////        }
+//        
+//    }
+ public List<Proveedor> traerProveedor() {
+        return controlPersis.traerProveedor();
+    }
 }   
+
+   
+
+
+//>>>>>>> parent of 0eea8e1 (Revert "listaprov")

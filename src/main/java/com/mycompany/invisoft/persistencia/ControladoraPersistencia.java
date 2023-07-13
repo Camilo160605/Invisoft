@@ -48,11 +48,22 @@ public class ControladoraPersistencia {
         proveedorjpa.create(prov);
     }
 
+//<<<<<<< HEAD
     UserJpaController usuJpa = new UserJpaController();
+   ;
     public List<User> traerUsuarios() {
         List<User> listaUsuario = usuJpa.findUserEntities();
         return listaUsuario;
         //Select * User       
     }  
+
+    public List<Proveedor> traerProveedor() {
+      return proveedorjpa.findProveedorEntities();
+        
+    }
+
+    
+    
+//>>>>>>> parent of 0eea8e1 (Revert "listaprov")
 }
 
