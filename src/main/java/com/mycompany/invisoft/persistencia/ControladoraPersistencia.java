@@ -48,7 +48,11 @@ public class ControladoraPersistencia {
         proveedorjpa.create(prov);
     }
 
-    
-    
+    UserJpaController usuJpa = new UserJpaController();
+    public List<User> traerUsuarios() {
+        List<User> listaUsuario = usuJpa.findUserEntities();
+        return listaUsuario;
+        //Select * User       
+    }  
 }
 
