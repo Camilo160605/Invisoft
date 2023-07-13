@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class ControladoraPersistencia {
     ClienteJpaController clientejpa = new ClienteJpaController();
-    ProveedorJpaController proveedorjpa = new ProveedorJpaController();
+    
 
     //CLIENTE
     public void guardar(Cliente cli) {
@@ -41,17 +41,18 @@ public class ControladoraPersistencia {
         }
     }
 
+    //PROVEEDOR
+    ProveedorJpaController proveedorjpa = new ProveedorJpaController(); 
     
     public void guardarprov(Proveedor prov) {
         proveedorjpa.create(prov);
     }
+
     UserJpaController usuJpa = new UserJpaController();
     public List<User> traerUsuarios() {
         List<User> listaUsuario = usuJpa.findUserEntities();
         return listaUsuario;
-        //Select * User
-        
-    }
-    
+        //Select * User       
+    }  
 }
 

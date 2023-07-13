@@ -2,8 +2,8 @@ package com.mycompany.invisoft;
 
 //import com.mycompany.invisoft.igu.Clientes;
 
-import com.mycompany.invisoft.igu.LoginInvisoft;
-//import com.mycompany.invisoft.igu.Proveedores;
+//import com.mycompany.invisoft.igu.LoginInvisoft;
+import com.mycompany.invisoft.igu.Proveedores;
 
 
 //import com.mycompany.invisoft.igu.Principal;
@@ -11,13 +11,13 @@ import com.mycompany.invisoft.igu.LoginInvisoft;
 public class Invisoft {
 
     public static void main(String[] args) {
-        LoginInvisoft empezamosfuerte = new LoginInvisoft();
+       /* LoginInvisoft empezamosfuerte = new LoginInvisoft();
         empezamosfuerte.setVisible(true);
-        empezamosfuerte.setLocationRelativeTo(null);
+        empezamosfuerte.setLocationRelativeTo(null);*/
         
-        /*Proveedores prov = new Proveedores();
+        Proveedores prov = new Proveedores();
         prov.setVisible(true);
         prov.setLocationRelativeTo(null);
-        */
+        
     }
 }
