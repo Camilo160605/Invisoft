@@ -261,6 +261,7 @@ public class RegistroProveedor extends javax.swing.JFrame {
         Proveedores vistaProv = new Proveedores();
         vistaProv.setVisible(true);
         vistaProv.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnGuardarRegProveedorActionPerformed
 
     private void btnCancelarRegProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarRegProveedorActionPerformed

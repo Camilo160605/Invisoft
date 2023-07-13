@@ -1,26 +1,14 @@
 package com.mycompany.invisoft.igu;
 
-import com.mycompany.invisoft.logica.Controladora;
-import com.mycompany.invisoft.logica.Proveedor;
-import java.util.List;
-import javax.swing.table.DefaultTableModel;
-
 
 public class Proveedores extends javax.swing.JFrame {
 
-    Controladora control = null;
     
     public Proveedores() {
-        control = new Controladora();
         initComponents();
     }
 
     @SuppressWarnings("unchecked")
-    
-    
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {                                  
-        cargarTablaProveedor();
-    }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -249,11 +237,6 @@ public class Proveedores extends javax.swing.JFrame {
         jLabel8.setText("Nombre o Razón Social:");
 
         btnBuscarProveedor.setText("Buscar");
-        btnBuscarProveedor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarProveedorActionPerformed(evt);
-            }
-        });
 
         tablaProveedor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -280,6 +263,7 @@ public class Proveedores extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRegistroProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jScrollPane1)
@@ -300,8 +284,7 @@ public class Proveedores extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(btnEliminarListaProveedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnEditarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(btnRegistroProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btnEditarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -309,7 +292,7 @@ public class Proveedores extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnRegistroProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -328,13 +311,13 @@ public class Proveedores extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tctNombreRazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnBuscarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnEliminarListaProveedor)
                         .addGap(36, 36, 36)
-                        .addComponent(btnEditarProveedor))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnEditarProveedor)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -342,9 +325,7 @@ public class Proveedores extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInicioInviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioInviActionPerformed
-        InicioInvisoft inicio = new InicioInvisoft();
-        inicio.setVisible(true);
-        inicio.setLocationRelativeTo(null);
+        // TODO add your handling code here:
     }//GEN-LAST:event_btnInicioInviActionPerformed
 
     private void btnClientesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesInicioActionPerformed
@@ -354,17 +335,24 @@ public class Proveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_btnClientesInicioActionPerformed
 
     private void btnProductosInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosInicioActionPerformed
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_btnProductosInicioActionPerformed
 
     private void btnVentasInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasInicioActionPerformed
-        Ventas ventas = new Ventas();
-        ventas.setVisible(true);
-        ventas.setLocationRelativeTo(null);
+        // TODO add your handling code here:
     }//GEN-LAST:event_btnVentasInicioActionPerformed
 
     private void btnProveedoresInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresInicioActionPerformed
+            Proveedores prov = new Proveedores();
+            prov.setVisible(true);
+            prov.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnProveedoresInicioActionPerformed
+
+    private void btnRegistroProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroProveedorActionPerformed
+        RegistroProveedor regProv = new RegistroProveedor();
+        regProv.setVisible(true);
+        regProv.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnRegistroProveedorActionPerformed
 
     private void btnEliminarListaProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarListaProveedorActionPerformed
        
@@ -377,16 +365,6 @@ public class Proveedores extends javax.swing.JFrame {
     private void btnReportesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesInicioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnReportesInicioActionPerformed
-
-    private void btnBuscarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarProveedorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBuscarProveedorActionPerformed
-
-    private void btnRegistroProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroProveedorActionPerformed
-        RegistroProveedor regprov = new RegistroProveedor();
-        regprov.setVisible(true);
-        regprov.setLocationRelativeTo(null);
-    }//GEN-LAST:event_btnRegistroProveedorActionPerformed
 
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -416,40 +394,4 @@ public class Proveedores extends javax.swing.JFrame {
     private javax.swing.JTextField tctNombreRazonSocial;
     private javax.swing.JTextField txtNumeroDocumento;
     // End of variables declaration//GEN-END:variables
-
-    private void cargarTablaProveedor() {
-       //definir modelo para la tabla 
-       DefaultTableModel tablaprov = new DefaultTableModel() {
-           
-           //que las filas y columnas no sean editables
-           @Override
-           public boolean isCellEditable(int row, int column){
-                return false;
-       }
-    };
-    
-       //establecemos nombres de la columna
-       String titulos[] = {"id Proveedor","Nombre Proveedor","Correo Proveedor","Tipo Documento","Documento Proveedor","Direc Proveedor","Tel Proveedor"};
-       tablaprov.setColumnIdentifiers(titulos);
-       
-       //traer datos de la bd
-       List <Proveedor> listaProveedor = control.traerProveedor();
-       
-       //Recorrer la lista y mostrar cada uno de los elementos en la tabla
-       if(listaProveedor!=null) {
-           for (Proveedor prov : listaProveedor) {
-               Object[] objeto = {prov.getId_proveedor(), prov.getNom_proveedor(), prov.getCorreo_proveedor(),
-               prov.getTipo_doc_proveedor(),prov.getDoc_proveedor(), prov.getDirec_proveedor(),prov.getTel_proveedor()};
-               
-               tablaprov.addRow(objeto);         
-           }
-       }
-       
-      tablaProveedor.setModel( tablaprov);
-
-  }  
-
 }
-    
-
-    
