@@ -67,6 +67,11 @@ public class Controladora {
 //        
 //    }
 
+    public List<Proveedor> traerProveedor() {
+        
+        return controlPersis.traerProveedor();
+    }
+
 
 
     

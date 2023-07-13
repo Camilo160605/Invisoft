@@ -48,6 +48,11 @@ public class ControladoraPersistencia {
         proveedorjpa.create(prov);
     }
 
+    public List<Proveedor> traerProveedor() {
+      return proveedorjpa.findProveedorEntities();
+        
+    }
+
     
     
 }

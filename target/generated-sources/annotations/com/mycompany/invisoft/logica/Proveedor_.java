@@ -4,7 +4,11 @@ import javax.annotation.processing.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2023-07-12T10:05:50", comments="EclipseLink-2.7.10.v20211216-rNA")
+<<<<<<< HEAD
+@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2023-07-13T10:55:40", comments="EclipseLink-2.7.10.v20211216-rNA")
+=======
+@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2023-07-12T22:09:54", comments="EclipseLink-2.7.10.v20211216-rNA")
+>>>>>>> 6212c40caa81e01fd3610cf23ecb8c1937967f4e
 @StaticMetamodel(Proveedor.class)
 public class Proveedor_ { 
 
