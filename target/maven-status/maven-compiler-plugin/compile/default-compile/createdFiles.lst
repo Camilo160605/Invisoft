@@ -34,7 +34,6 @@ com/mycompany/invisoft/igu/Ayuda$6.class
 com/mycompany/invisoft/igu/InicioInvisoft.class
 com/mycompany/invisoft/persistencia/exceptions/PreexistingEntityException.class
 com/mycompany/invisoft/igu/Clientes$10.class
-com/mycompany/invisoft/igu/DescargarReportes$1.class
 com/mycompany/invisoft/logica/Cliente.class
 com/mycompany/invisoft/igu/Proveedores$3.class
 com/mycompany/invisoft/igu/ModificarDatosProveedor$2.class

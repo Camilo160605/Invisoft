@@ -48,7 +48,7 @@ public class ControladoraPersistencia {
         proveedorjpa.create(prov);
     }
 
-//<<<<<<< HEAD
+
     UserJpaController usuJpa = new UserJpaController();
    ;
     public List<User> traerUsuarios() {
@@ -64,6 +64,14 @@ public class ControladoraPersistencia {
 
     
     
-//>>>>>>> parent of 0eea8e1 (Revert "listaprov")
+
+
+    public void borrarProveedor(int id_Proveedor) {
+        try {
+            proveedorjpa.destroy(id_Proveedor);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
 

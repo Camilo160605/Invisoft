@@ -99,9 +99,8 @@ public class Controladora {
  public List<Proveedor> traerProveedor() {
         return controlPersis.traerProveedor();
     }
-}   
-
    
-
-
-//>>>>>>> parent of 0eea8e1 (Revert "listaprov")
+    public void borrarProveedor(int id_Proveedor) {
+       controlPersis.borrarProveedor (id_Proveedor);
+    }
+}   

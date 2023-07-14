@@ -3,8 +3,6 @@ package com.mycompany.invisoft;
 import com.mycompany.invisoft.igu.Clientes;
 import com.mycompany.invisoft.igu.InicioInvisoft;
 //import com.mycompany.invisoft.igu.LoginInvisoft;
-//<<<<<<< HEAD
-
 import com.mycompany.invisoft.igu.Clientes;
 //import com.mycompany.invisoft.igu.Proveedores;
 
