@@ -47,25 +47,9 @@ public class ControladoraPersistencia {
     public void guardarprov(Proveedor prov) {
         proveedorjpa.create(prov);
     }
-
-
-    UserJpaController usuJpa = new UserJpaController();
-   ;
-    public List<User> traerUsuarios() {
-        List<User> listaUsuario = usuJpa.findUserEntities();
-        return listaUsuario;
-        //Select * User       
-    }  
-
-    public List<Proveedor> traerProveedor() {
+        public List<Proveedor> traerProveedor() {
       return proveedorjpa.findProveedorEntities();
-        
     }
-
-    
-    
-
-
     public void borrarProveedor(int id_Proveedor) {
         try {
             proveedorjpa.destroy(id_Proveedor);
@@ -73,5 +57,14 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+//USARIOS
+    UserJpaController usuJpa = new UserJpaController();
+    public List<User> traerUsuarios() {
+        List<User> listaUsuario = usuJpa.findUserEntities();
+        return listaUsuario;
+        //Select * User       
+    }  
+
 }
 

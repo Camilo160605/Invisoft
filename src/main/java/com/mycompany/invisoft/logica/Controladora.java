@@ -61,6 +61,13 @@ public class Controladora {
         controlPersis.guardarprov(prov); 
     }
 
+    public List<Proveedor> traerProveedor() {
+           return controlPersis.traerProveedor();
+       }
+
+       public void borrarProveedor(int id_proveedor) {
+          controlPersis.borrarProveedor (id_proveedor);
+       }
 
    public String revisarCuenta(String usuarioLogin, String contraUsuario) {
         String mensaje = "";
@@ -87,20 +94,5 @@ public class Controladora {
    
    
    
-//    public String revisarCuenta(String usuarioLogin, String contraUsuario) {
-//        
-////        List<User> listaUsuarios = controlPersis.traerUsuarios();
-////        
-////        for (User usu : listaUsuarios){
-////            if(usu.get)
-////        }
-//        
-//    }
- public List<Proveedor> traerProveedor() {
-        return controlPersis.traerProveedor();
-    }
-   
-    public void borrarProveedor(int id_Proveedor) {
-       controlPersis.borrarProveedor (id_Proveedor);
-    }
+
 }   

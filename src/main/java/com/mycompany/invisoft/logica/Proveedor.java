@@ -18,7 +18,7 @@ public class Proveedor implements Serializable {
     private String direc_proveedor;
     private String tel_proveedor;  
 
-    public Proveedor(){
+    public Proveedor() {
     }
 
     public Proveedor(int id_proveedor, String nom_proveedor, String tipo_doc_proveedor, String doc_proveedor, String correo_proveedor, String direc_proveedor, String tel_proveedor) {
@@ -86,35 +86,6 @@ public class Proveedor implements Serializable {
     public void setTel_proveedor(String tel_proveedor) {
         this.tel_proveedor = tel_proveedor;
     }
-
-    void setnombProveedor(String nombProveedor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void setcelProveedor(String celProveedor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void setcorreoProv(String correoProv) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void setdocProveedor(String docProveedor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void setdirecProveedor(String direcProveedor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void settipoDocumentoProveedor(String tipoDocumentoProveedor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
-    
-
-
-    
 }
 
 
