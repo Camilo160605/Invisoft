@@ -37,6 +37,7 @@ public class RegistroProveedor extends javax.swing.JFrame {
         btnCancelarRegProveedor = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel1.setBackground(new java.awt.Color(51, 0, 255));
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N

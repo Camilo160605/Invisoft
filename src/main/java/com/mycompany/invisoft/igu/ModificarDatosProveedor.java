@@ -56,9 +56,13 @@ public class ModificarDatosProveedor extends javax.swing.JPanel {
 
         label3.setText("label3");
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
         jLabel6.setBackground(new java.awt.Color(0, 0, 255));
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel6.setText("Modificacion de Datos");
+
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
         cmbTipoDocProveedor1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         cmbTipoDocProveedor1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Ti", "Cc" }));

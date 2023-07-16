@@ -46,6 +46,10 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+
         cmbTipoDocCliente.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         cmbTipoDocCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Ti", "Cc" }));
         cmbTipoDocCliente.addActionListener(new java.awt.event.ActionListener() {
