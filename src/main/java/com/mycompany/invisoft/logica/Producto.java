@@ -22,18 +22,28 @@ public class Producto implements Serializable {
     private String Referencia;
     private String Rin;
     private String Fecha;
+    private String Marca;
     //Proveedor provee;
 
     public Producto() {
     }
 
-    public Producto(int id_Llanta,String Referencia, String Rin, String Fecha) {
+    public Producto(int id_Llanta,String Referencia, String Rin, String Fecha,String Marca) {
         this.id_Llanta= id_Llanta;
         this.Referencia = Referencia;
         this.Rin = Rin;
         this.Fecha = Fecha;
+        this.Marca=Marca;
     }
 
+    public String getMarca() {
+        return Marca;
+    }
+
+    public void setMarca(String Marca) {
+        this.Marca = Marca;
+    }
+    
     public int getId_Llanta() {
         return id_Llanta;
     }
