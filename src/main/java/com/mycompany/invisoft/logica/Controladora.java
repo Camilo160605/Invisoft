@@ -28,7 +28,7 @@ public class Controladora {
     }
 
     public void borrarCliente(int id_Cliente) {
-        controlPersis.borrarMascota(id_Cliente);
+        controlPersis.borrarCliente(id_Cliente);
     }
 
     public Cliente traerCliente(int id_Cliente) {
@@ -88,6 +88,15 @@ public class Controladora {
                 }
         }
         return mensaje;
+    }
+
+    public void crearLlanta(String refLlanta, String rinLlanta, String fechaLlanta) {
+        Producto llanta = new Producto();
+        llanta.setReferencia(refLlanta);
+        llanta.setRin(rinLlanta);
+        llanta.setFecha(fechaLlanta);
+        
+        controlPersis.guardarLlanta(llanta);
     }
 
    

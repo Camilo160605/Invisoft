@@ -1,6 +1,7 @@
 package com.mycompany.invisoft.persistencia;
 
 import com.mycompany.invisoft.logica.Cliente;
+import com.mycompany.invisoft.logica.Producto;
 import com.mycompany.invisoft.logica.Proveedor;
 import com.mycompany.invisoft.logica.User;
 import com.mycompany.invisoft.persistencia.exceptions.NonexistentEntityException;
@@ -21,7 +22,7 @@ public class ControladoraPersistencia {
         return clientejpa.findClienteEntities();
     }
 
-    public void borrarMascota(int id_Cliente) {
+    public void borrarCliente(int id_Cliente) {
         try {
             clientejpa.destroy(id_Cliente);
         } catch (NonexistentEntityException ex) {
@@ -65,6 +66,12 @@ public class ControladoraPersistencia {
         return listaUsuario;
         //Select * User       
     }  
+    ProductoJpaController producJpa = new ProductoJpaController();
+    public void guardarLlanta(Producto llanta) {
+        producJpa.create(llanta);
+    }
+    
+
 
 }
 

@@ -84,6 +84,7 @@ public class LoginInvisoft extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(5, 0, 255));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton1.setText("Iniciar Sesion");
+        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setBorderPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,7 +101,6 @@ public class LoginInvisoft extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtContraUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel4Layout.createSequentialGroup()
                             .addGap(16, 16, 16)
@@ -112,7 +112,8 @@ public class LoginInvisoft extends javax.swing.JFrame {
                                     .addComponent(txtUsuarioLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(jPanel4Layout.createSequentialGroup()
                             .addGap(33, 33, 33)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(txtContraUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -190,16 +191,13 @@ public class LoginInvisoft extends javax.swing.JFrame {
         String contraUsuario = txtContraUsuario.getText();
 
         String mensaje = Control.revisarCuenta(usuarioLogin,contraUsuario);
-        
-        
+                 
         if(mensaje.equals("Correcto")){
             InicioInvisoft Iniciopapa = new InicioInvisoft();
             Iniciopapa.setVisible(true);
             Iniciopapa.setLocationRelativeTo(null);
-            this.dispose();
         }
         else{
-            txtUsuarioLogin.setText("");
             txtContraUsuario.setText("");
             mostrarMensaje("Usuario incorrecto","Error","Datos incorrectos");
         }

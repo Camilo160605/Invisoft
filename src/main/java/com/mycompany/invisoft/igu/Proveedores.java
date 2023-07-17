@@ -353,9 +353,9 @@ public class Proveedores extends javax.swing.JFrame {
 
     private void btnEliminarListaProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarListaProveedorActionPerformed
         //controlo quela tabla no este vacia
-        if (tablaProveedor.getRowCount() > 0 ) {
+        if (tablaProveedor.getRowCount()>0 ) {
             //controlo que haya seleccionado minimo 1 registro
-            if(tablaProveedor.getRowCount() != -1 ) {
+            if(tablaProveedor.getRowCount()!= -1 ) {
                 int id_Proveedor = Integer.parseInt(String.valueOf(tablaProveedor.getValueAt(tablaProveedor.getSelectedRow(),0)));
                 control.borrarProveedor(id_Proveedor);
                 
