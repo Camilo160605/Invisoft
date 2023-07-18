@@ -229,6 +229,7 @@ public class Ayuda extends javax.swing.JFrame {
             }
         });
 
+        btnEnviarReporte.setBackground(new java.awt.Color(0, 0, 255));
         btnEnviarReporte.setText("Enviar Reporte");
         btnEnviarReporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
