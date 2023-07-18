@@ -58,8 +58,21 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+     public Proveedor traerProv(int id_Proveedor) {
+      return proveedorjpa.findProveedor(id_Proveedor);
+    }
+     
+     public void modificarprov(Proveedor prov) {
+        try {
+            proveedorjpa.edit(prov);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
-//USARIOS
+
+//USUARIOS
     UserJpaController usuJpa = new UserJpaController();
     public List<User> traerUsuarios() {
         List<User> listaUsuario = usuJpa.findUserEntities();
@@ -70,6 +83,10 @@ public class ControladoraPersistencia {
     public void guardarLlanta(Producto llanta) {
         producJpa.create(llanta);
     }
+
+   
+   
+   
     
 
 

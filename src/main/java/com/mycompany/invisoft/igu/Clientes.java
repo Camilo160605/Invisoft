@@ -393,7 +393,7 @@ public class Clientes extends javax.swing.JFrame {
         if(tablaClientes.getRowCount()>0){
             //controlo que se haya seleccionado una fila
             if (tablaClientes.getSelectedRow()!=-1){
-                //Cliente a eliminar
+                //Cliente a editar
                 int id_Cliente = Integer.parseInt(String.valueOf(tablaClientes.getValueAt(tablaClientes.getSelectedRow(),0)));
                 
                 ModificarDatosCliente modifDatosCliente = new ModificarDatosCliente(id_Cliente);
@@ -408,6 +408,7 @@ public class Clientes extends javax.swing.JFrame {
         else{
             mostrarMensaje("No hay nada para eliminar en la tabla","Error","Error al eliminar");
         }
+       
     }//GEN-LAST:event_btnEditarClientesActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened

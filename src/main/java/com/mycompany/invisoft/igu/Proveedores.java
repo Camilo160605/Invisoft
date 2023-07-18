@@ -71,7 +71,7 @@ public class Proveedores extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 13, Short.MAX_VALUE)
+            .addGap(0, 23, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,6 +268,11 @@ public class Proveedores extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(0, 0, 255));
         jButton1.setText("AÑADIR PROVEEDOR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -389,7 +394,28 @@ public class Proveedores extends javax.swing.JFrame {
     
   
     private void btnEditarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarProveedorActionPerformed
-   
+   //controlo quela tabla no este vacia
+        if (tablaProveedor.getRowCount()>0 ) {
+            //controlo que haya seleccionado minimo 1 registro
+            if(tablaProveedor.getRowCount()!= -1 ) {
+               
+                //id de la persona a editar
+                int id_Proveedor = Integer.parseInt(String.valueOf(tablaProveedor.getValueAt(tablaProveedor.getSelectedRow(),0)));
+              
+                ModificarDatosProveedor modifDatosProv = new ModificarDatosProveedor(id_Proveedor);
+                modifDatosProv.setVisible(true);
+                modifDatosProv.setLocationRelativeTo(null);
+                this.dispose();
+
+             
+            }
+            else {
+                mostrarMensaje("No seleccionó ningun Proveedor","Error","Error al Eliminar");
+            }
+        }
+        else{
+            mostrarMensaje("No hay nada para eliminar en la tabla","Error","Error al eliminar");
+        }
     }//GEN-LAST:event_btnEditarProveedorActionPerformed
 
     private void btnBuscarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarProveedorActionPerformed
@@ -429,6 +455,10 @@ public class Proveedores extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         cargarTablaProveedor();
     }//GEN-LAST:event_formWindowOpened
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
