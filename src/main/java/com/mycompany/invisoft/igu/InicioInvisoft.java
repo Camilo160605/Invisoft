@@ -3,9 +3,19 @@ package com.mycompany.invisoft.igu;
 
 public class InicioInvisoft extends javax.swing.JFrame {
 
-   
+   Proveedores prov = null;
     public InicioInvisoft() {
+        prov = new Proveedores();
         initComponents();
+    }
+    
+    private void mostrarprov(){
+        prov.setVisible(true);
+        prov.setLocationRelativeTo(null);
+    }
+    
+    public void cerrarprov(){
+        prov.setVisible(false);
     }
 
    
@@ -25,7 +35,7 @@ public class InicioInvisoft extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        btnvistaProveedores = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -122,11 +132,11 @@ public class InicioInvisoft extends javax.swing.JFrame {
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        jButton3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton3.setText("Productos");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnvistaProveedores.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnvistaProveedores.setText("Productos");
+        btnvistaProveedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnvistaProveedoresActionPerformed(evt);
             }
         });
 
@@ -162,7 +172,7 @@ public class InicioInvisoft extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnClientesInicio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addComponent(btnvistaProveedores, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addGap(57, 57, 57)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(4, 4, 4))
@@ -180,7 +190,7 @@ public class InicioInvisoft extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(btnClientesInicio)
                 .addGap(29, 29, 29)
-                .addComponent(jButton3)
+                .addComponent(btnvistaProveedores)
                 .addGap(26, 26, 26)
                 .addComponent(jButton6)
                 .addGap(26, 26, 26)
@@ -288,18 +298,15 @@ public class InicioInvisoft extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnvistaProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvistaProveedoresActionPerformed
         Productos vistaProd = new Productos();
         vistaProd.setVisible(true);
         vistaProd.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnvistaProveedoresActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Proveedores vistaProv = new Proveedores();
-        vistaProv.setVisible(true);
-        vistaProv.setLocationRelativeTo(null);
-        this.dispose();
+        mostrarprov();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -316,9 +323,9 @@ public class InicioInvisoft extends javax.swing.JFrame {
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClientesInicio;
+    private javax.swing.JButton btnvistaProveedores;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;

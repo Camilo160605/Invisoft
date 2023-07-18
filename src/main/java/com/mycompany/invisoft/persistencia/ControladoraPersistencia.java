@@ -70,6 +70,12 @@ public class ControladoraPersistencia {
     public void guardarLlanta(Producto llanta) {
         producJpa.create(llanta);
     }
+
+    public List<Producto> traerProducto() {
+        List<Producto> listaproduc = producJpa.findProductoEntities();
+        return listaproduc;
+        //Select * User
+    }
     
 
 

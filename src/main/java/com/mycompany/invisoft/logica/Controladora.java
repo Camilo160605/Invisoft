@@ -101,8 +101,8 @@ public class Controladora {
         controlPersis.guardarLlanta(llanta);
     }
 
-    public List<Productos> traerProducto() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public List<Producto> traerProducto() {
+        return controlPersis.traerProducto();
     }
 
    
