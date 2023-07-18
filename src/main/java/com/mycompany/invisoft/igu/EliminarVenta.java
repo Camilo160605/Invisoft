@@ -232,7 +232,7 @@ public class EliminarVenta extends javax.swing.JFrame {
                                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton2)))
-                        .addGap(0, 2, Short.MAX_VALUE))))
+                        .addGap(0, 41, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
