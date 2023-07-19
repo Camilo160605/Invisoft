@@ -93,6 +93,7 @@ public class Productos extends javax.swing.JFrame {
             }
         });
 
+        btnguardarLlanta.setBackground(new java.awt.Color(0, 0, 255));
         btnguardarLlanta.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         btnguardarLlanta.setText("Guardar");
         btnguardarLlanta.addActionListener(new java.awt.event.ActionListener() {
@@ -101,6 +102,7 @@ public class Productos extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 255));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton2.setText("Limpiar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -279,6 +281,8 @@ public class Productos extends javax.swing.JFrame {
     private javax.swing.JButton btnguardarLlanta;
     private javax.swing.JComboBox<String> cmbProveedores;
     private javax.swing.JButton jButton2;
+
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -289,6 +293,10 @@ public class Productos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tablaProductos;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtFechaLlanta;
     private javax.swing.JTextField txtRefLlanta;
     private javax.swing.JTextField txtRinLlanta;

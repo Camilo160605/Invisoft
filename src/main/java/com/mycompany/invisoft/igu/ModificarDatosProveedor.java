@@ -1,152 +1,160 @@
 package com.mycompany.invisoft.igu;
 
+import com.mycompany.invisoft.logica.Controladora;
+import com.mycompany.invisoft.logica.Proveedor;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
-public class ModificarDatosProveedor extends javax.swing.JPanel {
+public class ModificarDatosProveedor extends javax.swing.JFrame {
 
-    
-    public ModificarDatosProveedor() {
+    Controladora control = null;
+    int id_Proveedor;
+    Proveedor prov;
+
+    public ModificarDatosProveedor(int id_Proveedor) {
+        control = new Controladora();
+        //this.id_Proveedor = id_Proveedor;
         initComponents();
+        cargarDatosP(id_Proveedor);
     }
 
-   
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        label1 = new java.awt.Label();
-        panel1 = new java.awt.Panel();
         jLabel1 = new javax.swing.JLabel();
-        label2 = new java.awt.Label();
-        label3 = new java.awt.Label();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        cmbTipoDocProveedor = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtNumDocProveedor = new javax.swing.JTextField();
+        txtDireccionProveedor = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        btnLimpiarRegProveedor = new javax.swing.JButton();
+        txtNomProveedor = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        cmbTipoDocProveedor1 = new javax.swing.JComboBox<>();
+        txtCorreoProveedor = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
+        txtCelProveedor = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        txtNumDocProveedor1 = new javax.swing.JTextField();
-        txtDireccionProveedor1 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        txtNomProveedor1 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        txtCorreoProveedor1 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        txtCelProveedor1 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        btnCancelarRegProveedor = new javax.swing.JButton();
         btnGuardarRegProveedor = new javax.swing.JButton();
-        btnLimpiarRegProveedor1 = new javax.swing.JButton();
+        btnCancelarRegProveedor = new javax.swing.JButton();
 
-        label1.setText("label1");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 204));
 
-        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
-        panel1.setLayout(panel1Layout);
-        panel1Layout.setHorizontalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        panel1Layout.setVerticalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jLabel1.setBackground(new java.awt.Color(51, 0, 255));
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel1.setText("Modificacion de Datos");
 
-        jLabel1.setText("jLabel1");
-
-        label2.setText("label2");
-
-        label3.setText("label3");
-
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-
-        jLabel6.setBackground(new java.awt.Color(0, 0, 255));
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
-        jLabel6.setText("Modificacion de Datos");
-
-        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
-
-        cmbTipoDocProveedor1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        cmbTipoDocProveedor1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Ti", "Cc" }));
-        cmbTipoDocProveedor1.addActionListener(new java.awt.event.ActionListener() {
+        cmbTipoDocProveedor.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        cmbTipoDocProveedor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Ti", "Cc" }));
+        cmbTipoDocProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbTipoDocProveedor1ActionPerformed(evt);
+                cmbTipoDocProveedorActionPerformed(evt);
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel7.setText("Tipo de Documento");
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel2.setText("Tipo de Documento");
 
-        jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel8.setText("Numero de documento");
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel3.setText("Numero de documento");
 
-        txtNumDocProveedor1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtNumDocProveedor.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtNumDocProveedor.setText("Documento (TI-CC)");
 
-        txtDireccionProveedor1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        txtDireccionProveedor1.addActionListener(new java.awt.event.ActionListener() {
+        txtDireccionProveedor.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtDireccionProveedor.setText("Direccion");
+        txtDireccionProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDireccionProveedor1ActionPerformed(evt);
+                txtDireccionProveedorActionPerformed(evt);
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel9.setText("Direccion:");
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel4.setText("Direccion:");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtNumDocProveedor1)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtNumDocProveedor)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cmbTipoDocProveedor1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 151, Short.MAX_VALUE))
-                    .addComponent(txtDireccionProveedor1))
+                                .addComponent(cmbTipoDocProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(txtDireccionProveedor))
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbTipoDocProveedor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cmbTipoDocProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addGap(41, 41, 41)
-                .addComponent(jLabel8)
+                .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtNumDocProveedor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtNumDocProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
-                .addComponent(jLabel9)
+                .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtDireccionProveedor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addComponent(txtDireccionProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        txtNomProveedor1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        txtNomProveedor1.addActionListener(new java.awt.event.ActionListener() {
+        btnLimpiarRegProveedor.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        btnLimpiarRegProveedor.setText("Limpiar");
+        btnLimpiarRegProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomProveedor1ActionPerformed(evt);
+                btnLimpiarRegProveedorActionPerformed(evt);
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel10.setText("Nombre o Razon Social");
+        txtNomProveedor.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtNomProveedor.setText("Nombre");
+        txtNomProveedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomProveedorActionPerformed(evt);
+            }
+        });
 
-        txtCorreoProveedor1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel6.setText("Nombre o Razon Social");
 
-        jLabel11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel11.setText("Correo");
+        txtCorreoProveedor.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtCorreoProveedor.setText("example@gmail.com");
 
-        txtCelProveedor1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel7.setText("Correo");
 
-        jLabel12.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel12.setText("Telefono");
+        txtCelProveedor.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtCelProveedor.setText("##########");
+
+        jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel8.setText("Telefono");
+
+        btnGuardarRegProveedor.setBackground(new java.awt.Color(0, 0, 255));
+        btnGuardarRegProveedor.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        btnGuardarRegProveedor.setForeground(new java.awt.Color(255, 255, 255));
+        btnGuardarRegProveedor.setText("Guardar");
+        btnGuardarRegProveedor.setBorderPainted(false);
+        btnGuardarRegProveedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarRegProveedorActionPerformed(evt);
+            }
+        });
 
         btnCancelarRegProveedor.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnCancelarRegProveedor.setText("Cancelar");
@@ -156,159 +164,169 @@ public class ModificarDatosProveedor extends javax.swing.JPanel {
             }
         });
 
-        btnGuardarRegProveedor.setBackground(new java.awt.Color(0, 0, 255));
-        btnGuardarRegProveedor.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        btnGuardarRegProveedor.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardarRegProveedor.setText("Guardar Cambios");
-        btnGuardarRegProveedor.setBorderPainted(false);
-        btnGuardarRegProveedor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarRegProveedorActionPerformed(evt);
-            }
-        });
-
-        btnLimpiarRegProveedor1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        btnLimpiarRegProveedor1.setText("Limpiar");
-        btnLimpiarRegProveedor1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarRegProveedor1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(134, 134, 134)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtCelProveedor1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtCorreoProveedor1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtNomProveedor1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(264, 264, 264))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(btnLimpiarRegProveedor1)
-                        .addGap(88, 88, 88)
-                        .addComponent(btnGuardarRegProveedor)
-                        .addGap(98, 98, 98)
-                        .addComponent(btnCancelarRegProveedor))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(213, 213, 213)
-                        .addComponent(jLabel6)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel6)
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNomProveedor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCorreoProveedor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(46, 46, 46)
-                        .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCelProveedor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(40, 40, 40)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnLimpiarRegProveedor1)
-                    .addComponent(btnGuardarRegProveedor)
-                    .addComponent(btnCancelarRegProveedor))
-                .addContainerGap(67, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1057, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtCelProveedor, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtCorreoProveedor, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtNomProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnLimpiarRegProveedor)
+                        .addGap(70, 70, 70)
+                        .addComponent(btnGuardarRegProveedor)
+                        .addGap(83, 83, 83)
+                        .addComponent(btnCancelarRegProveedor)
+                        .addGap(133, 133, 133))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(148, 148, 148))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNomProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtCorreoProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtCelProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnLimpiarRegProveedor)
+                    .addComponent(btnCancelarRegProveedor)
+                    .addComponent(btnGuardarRegProveedor))
+                .addGap(57, 57, 57))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLimpiarRegProveedor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarRegProveedor1ActionPerformed
-        txtNomProveedor1.setText("");
-        txtCelProveedor1.setText("");
-        txtCorreoProveedor1.setText("");
-        txtDireccionProveedor1.setText("");
-        txtNumDocProveedor1.setText("");
-        cmbTipoDocProveedor1.setSelectedIndex(0);
-    }//GEN-LAST:event_btnLimpiarRegProveedor1ActionPerformed
+    private void cmbTipoDocProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipoDocProveedorActionPerformed
+
+    }//GEN-LAST:event_cmbTipoDocProveedorActionPerformed
+
+    private void txtDireccionProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionProveedorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDireccionProveedorActionPerformed
+
+    private void btnLimpiarRegProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarRegProveedorActionPerformed
+        txtNomProveedor.setText("");
+        txtCelProveedor.setText("");
+        txtCorreoProveedor.setText("");
+        txtDireccionProveedor.setText("");
+        txtNumDocProveedor.setText("");
+        cmbTipoDocProveedor.setSelectedIndex(0);
+    }//GEN-LAST:event_btnLimpiarRegProveedorActionPerformed
+
+    private void txtNomProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomProveedorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomProveedorActionPerformed
 
     private void btnGuardarRegProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarRegProveedorActionPerformed
-
+        //DATOS DEL PROVEEDOR
+        String nombProveedor = txtNomProveedor.getText();
+        String celProveedor = txtCelProveedor.getText();
+        String correoProv = txtCorreoProveedor.getText();
+        String direcProveedor = txtDireccionProveedor.getText();
+        String docProveedor = txtNumDocProveedor.getText();
+        String tipoDocumentoProveedor = (String) cmbTipoDocProveedor.getSelectedItem();
+        
+        control.modificarprov(prov,nombProveedor, celProveedor, correoProv, 
+                direcProveedor, docProveedor, tipoDocumentoProveedor);
+        //Mensaje que todo salió bien
+        mostrarMensaje("Edicion realizada correctamente","Info","Edicion Correcta");
+        
+        Proveedores vistaProv = new Proveedores();
+        vistaProv.setVisible(true);
+        vistaProv.setLocationRelativeTo(null); 
+        this.dispose();
     }//GEN-LAST:event_btnGuardarRegProveedorActionPerformed
 
     private void btnCancelarRegProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarRegProveedorActionPerformed
-        Proveedores vistaProv = new Proveedores();
-        vistaProv.setVisible(true);
-        vistaProv.setLocationRelativeTo(null);
-        //this.dispose();
+        Proveedores prov = new Proveedores();
+        prov.setVisible(true);
+        prov.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnCancelarRegProveedorActionPerformed
 
-    private void txtNomProveedor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomProveedor1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomProveedor1ActionPerformed
-
-    private void txtDireccionProveedor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionProveedor1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDireccionProveedor1ActionPerformed
-
-    private void cmbTipoDocProveedor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipoDocProveedor1ActionPerformed
-
-    }//GEN-LAST:event_cmbTipoDocProveedor1ActionPerformed
-
-
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelarRegProveedor;
     private javax.swing.JButton btnGuardarRegProveedor;
-    private javax.swing.JButton btnLimpiarRegProveedor1;
-    private javax.swing.JComboBox<String> cmbTipoDocProveedor1;
+    private javax.swing.JButton btnLimpiarRegProveedor;
+    private javax.swing.JComboBox<String> cmbTipoDocProveedor;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
-    private java.awt.Label label1;
-    private java.awt.Label label2;
-    private java.awt.Label label3;
-    private java.awt.Panel panel1;
-    private javax.swing.JTextField txtCelProveedor1;
-    private javax.swing.JTextField txtCorreoProveedor1;
-    private javax.swing.JTextField txtDireccionProveedor1;
-    private javax.swing.JTextField txtNomProveedor1;
-    private javax.swing.JTextField txtNumDocProveedor1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField txtCelProveedor;
+    private javax.swing.JTextField txtCorreoProveedor;
+    private javax.swing.JTextField txtDireccionProveedor;
+    private javax.swing.JTextField txtNomProveedor;
+    private javax.swing.JTextField txtNumDocProveedor;
     // End of variables declaration//GEN-END:variables
-}
+
+    private void cargarDatosP(int id_Proveedor) {
+        this.prov = control.traerProv(id_Proveedor);
+        
+        txtNomProveedor.setText(prov.getNom_proveedor());
+        txtCelProveedor.setText(prov.getTel_proveedor());
+        txtCorreoProveedor.setText(prov.getCorreo_proveedor());
+        txtDireccionProveedor.setText(prov.getDirec_proveedor());
+        txtNumDocProveedor.setText(prov.getDoc_proveedor());
+         if (prov.getTipo_doc_proveedor().equals("Ti")){
+            cmbTipoDocProveedor.setSelectedIndex(1);
+        }
+        else {
+            if (prov.getTipo_doc_proveedor().equals("Cc")){
+            cmbTipoDocProveedor.setSelectedIndex(2);
+            }
+        }        
+    }
+    
+     public void mostrarMensaje (String mensaje,String tipo, String titulo){
+                JOptionPane optionPane = new JOptionPane (mensaje);
+                
+                if(tipo.equals("Info")){
+                optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                }
+                else if (tipo.equals("Error")){
+                optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+                }
+                JDialog dialog = optionPane.createDialog(titulo);
+                dialog.setAlwaysOnTop(true);
+                dialog.setVisible(true);
+    }
+      
+}      
+    

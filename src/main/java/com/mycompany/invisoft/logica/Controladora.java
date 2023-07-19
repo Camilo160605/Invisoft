@@ -49,7 +49,7 @@ public class Controladora {
         
         
     } 
-
+//PROVEEDORES
     public void guardarprov(String nombProveedor, String celProveedor, String correoProv, String direcProveedor, String docProveedor, String tipoDocumentoProveedor) {
         Proveedor prov = new Proveedor();
         prov.setNom_proveedor(nombProveedor);
@@ -69,7 +69,27 @@ public class Controladora {
        public void borrarProveedor(int id_proveedor) {
           controlPersis.borrarProveedor (id_proveedor);
        }
+       
+    public Proveedor traerProv(int id_Proveedor) {
+     return controlPersis.traerProv (id_Proveedor);
+    }
+    
+     public void modificarprov(Proveedor prov, String nombProveedor, String celProveedor, 
+        String correoProv, String direcProveedor, String docProveedor, String tipoDocumentoProveedor) {
+        
+        prov.setNom_proveedor(nombProveedor);
+       prov.setTel_proveedor(celProveedor);
+       prov.setCorreo_proveedor(direcProveedor);
+       prov.setDirec_proveedor(direcProveedor);
+       prov.setDoc_proveedor(docProveedor);
+       prov.setTipo_doc_proveedor(docProveedor);
+       
+       controlPersis.modificarprov(prov);
+    }
 
+
+
+//LOGIN
    public String revisarCuenta(String usuarioLogin, String contraUsuario) {
         String mensaje = "";
         List<User> listaUsuarios = controlPersis.traerUsuarios();
@@ -106,8 +126,4 @@ public class Controladora {
     }
 
    
-   
-   
-   
-
 }   

@@ -1,9 +1,46 @@
 package com.mycompany.invisoft.igu;
 
+import com.mysql.cj.Session;
+import java.util.Properties;
+
 
 public class Ayuda extends javax.swing.JFrame {
 
+    private static String emailFrom = "fbenites612@gmail.com";
+    private static String passwordFrom = "dghzngmzoovyviry";
+    private String emailTo;
+    private String subject;
+    private String content;
     
+    private Properties mProperties;
+    private Session mSession;
+    private MimeMessage mCorreo;
+    
+    private void createEmail() {
+        subject = txtsubject.getText().trim();
+        content = txtcontent.getText().trim();
+        
+        mProperties.put("mail.smtp.host", "smtp.gmail.com");
+        mProperties.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+        mProperties.setProperty("mail.smtp.starttls.enable", "true");
+        mProperties.setProperty("mail.smtp.port","587");
+        mProperties.setProperty("mail.smtp.user", emailFrom);
+        mProperties.setProperty("mail.smtp.ssl-protocols", "TLSvl.2");
+        mProperties.setProperty("mail.smtp.auth", "true");
+        
+        
+        mSession = Session.getDefaultInstance(mProperties);
+        
+        mCorreo = new MimeMessage (mSession);
+        mCorreo.setFrom(new InternetAdress(emailFrom));
+    }
+    
+    private void sendEmail(){
+        
+    }
+    
+            
+            
     public Ayuda() {
         initComponents();
     }
@@ -31,9 +68,9 @@ public class Ayuda extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtNomProveedor = new javax.swing.JTextField();
+        txtsubject = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        txtNomProveedor1 = new javax.swing.JTextField();
+        txtcontent = new javax.swing.JTextField();
         btnEnviarReporte = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -210,26 +247,28 @@ public class Ayuda extends javax.swing.JFrame {
         );
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel4.setText("Titulo");
+        jLabel4.setText("Asunto:");
 
-        txtNomProveedor.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        txtNomProveedor.addActionListener(new java.awt.event.ActionListener() {
+        txtsubject.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtsubject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomProveedorActionPerformed(evt);
+                txtsubjectActionPerformed(evt);
             }
         });
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel6.setText("Descripción del problema");
+        jLabel6.setText("Descripción del problema:");
 
-        txtNomProveedor1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        txtNomProveedor1.addActionListener(new java.awt.event.ActionListener() {
+        txtcontent.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        txtcontent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomProveedor1ActionPerformed(evt);
+                txtcontentActionPerformed(evt);
             }
         });
 
+        btnEnviarReporte.setBackground(new java.awt.Color(0, 0, 255));
         btnEnviarReporte.setText("Enviar Reporte");
+        btnEnviarReporte.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 0, 255)));
         btnEnviarReporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEnviarReporteActionPerformed(evt);
@@ -260,34 +299,35 @@ public class Ayuda extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel6)
-                            .addComponent(txtNomProveedor1, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
-                            .addComponent(btnEnviarReporte, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel8)
-                                        .addComponent(jLabel7))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(35, 35, 35)
-                                        .addComponent(jLabel10)))
-                                .addGap(125, 125, 125)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(57, 57, 57)
-                                        .addComponent(jLabel12)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11))
-                            .addComponent(txtNomProveedor))
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel4)
+                                .addComponent(jLabel6)
+                                .addComponent(txtcontent, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel8)
+                                            .addComponent(jLabel7))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(35, 35, 35)
+                                            .addComponent(jLabel10)))
+                                    .addGap(125, 125, 125)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel9)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(57, 57, 57)
+                                            .addComponent(jLabel12)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel11))
+                                .addComponent(txtsubject))
+                            .addComponent(btnEnviarReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -297,11 +337,11 @@ public class Ayuda extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtNomProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtsubject, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtNomProveedor1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtcontent, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnEnviarReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
@@ -349,13 +389,13 @@ public class Ayuda extends javax.swing.JFrame {
         proveedores.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnProveedoresInicioActionPerformed
 
-    private void txtNomProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomProveedorActionPerformed
+    private void txtsubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsubjectActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomProveedorActionPerformed
+    }//GEN-LAST:event_txtsubjectActionPerformed
 
-    private void txtNomProveedor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomProveedor1ActionPerformed
+    private void txtcontentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcontentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomProveedor1ActionPerformed
+    }//GEN-LAST:event_txtcontentActionPerformed
 
     private void btnEnviarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarReporteActionPerformed
         // TODO add your handling code here:
@@ -390,7 +430,7 @@ public class Ayuda extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private java.awt.Label label1;
-    private javax.swing.JTextField txtNomProveedor;
-    private javax.swing.JTextField txtNomProveedor1;
+    private javax.swing.JTextField txtcontent;
+    private javax.swing.JTextField txtsubject;
     // End of variables declaration//GEN-END:variables
 }
