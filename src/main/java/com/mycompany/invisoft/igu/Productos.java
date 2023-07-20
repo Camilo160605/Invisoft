@@ -125,10 +125,15 @@ public class Productos extends javax.swing.JFrame {
         });
 
         jLabel22.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel22.setText("Marca:");
+        jLabel22.setText("Precio");
 
         txtPrecioLlanta.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtPrecioLlanta.setText("####");
+        txtPrecioLlanta.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPrecioLlantaKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -273,12 +278,11 @@ public class Productos extends javax.swing.JFrame {
         String fechaLlanta = txtFechaLlanta.getText(); 
         String marcaLlanta = txtmarcaLlanta.getText();
         Integer precioLlanta = Integer.parseInt(txtPrecioLlanta.getText());
+        String nombreProveedor = (String) cmbProveedores.getSelectedItem();
         
-        control.crearLlanta(refLlanta,rinLlanta,fechaLlanta,marcaLlanta,precioLlanta);
+        control.crearLlanta(refLlanta,rinLlanta,fechaLlanta,marcaLlanta,precioLlanta,nombreProveedor);
         mostrarMensaje("Llanta guardada con exito", "Info", "Guardado con exito");
-        
-        
-        
+    
     }//GEN-LAST:event_btnguardarLlantaActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -302,6 +306,9 @@ public class Productos extends javax.swing.JFrame {
     private void txtmarcaLlantaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmarcaLlantaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtmarcaLlantaActionPerformed
+
+    private void txtPrecioLlantaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPrecioLlantaKeyTyped
+    }//GEN-LAST:event_txtPrecioLlantaKeyTyped
 
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -349,14 +356,14 @@ public class Productos extends javax.swing.JFrame {
                 }
             };
             //Establecemos nombre de la columna
-            String titulos[]={"Referencia","Rin","Fecha","Marca","Precio"};
+            String titulos[]={"Referencia","Rin","Fecha","Marca","Precio","NombreProveedor"};
             modeloTablaProd.setColumnIdentifiers(titulos);
             //traer la lista de productos que tenemos en la BD
             List <Producto> listaproduc = control.traerProducto();              
             //Recorremos la lista y seteamos todos los datos de la BD en la tabla
                 if(listaproduc != null){
                     for(Producto prod : listaproduc){
-                        Object[] objeto = {prod.getReferencia(),prod.getRin(),prod.getFecha(),prod.getMarca(),prod.getPrecio()};
+                        Object[] objeto = {prod.getReferencia(),prod.getRin(),prod.getFecha(),prod.getMarca(),prod.getPrecio(),prod.getProveedor()};
                         
                         modeloTablaProd.addRow(objeto);
                     }

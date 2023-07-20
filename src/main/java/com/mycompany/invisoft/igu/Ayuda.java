@@ -47,8 +47,7 @@ public class Ayuda extends javax.swing.JFrame {
             mCorreo.setFrom(new InternetAddress(emailFrom));
             mCorreo.setRecipient(Message.RecipientType.TO, new InternetAddress(emailTo));
             mCorreo.setSubject(subject);
-            mCorreo.setText(content, "ISO-885-1", "html");
-;            
+            mCorreo.setText(content, "ISO-885-1", "html");           
         } catch (AddressException ex) {
             Logger.getLogger(Ayuda.class.getName()).log(Level.SEVERE, null, ex);
         } catch (MessagingException ex) {
@@ -423,54 +422,9 @@ public class Ayuda extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSubjectActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSubjectActionPerformed
+    private void btnProveedoresInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresInicioActionPerformed
 
-    private void txtContentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContentActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtContentActionPerformed
-
-    private void btnEnviarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarReporteActionPerformed
-    createEmail();
-    sendEmail();
-    }//GEN-LAST:event_btnEnviarReporteActionPerformed
-
-    private void txtToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtToActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtToActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void btnInicioInviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioInviActionPerformed
-        InicioInvisoft inicio = new InicioInvisoft();
-        inicio.setVisible(true);
-        inicio.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnInicioInviActionPerformed
-
-    private void btnClientesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesInicioActionPerformed
-        Clientes clientes = new Clientes();
-        clientes.setVisible(true);
-        clientes.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnClientesInicioActionPerformed
-
-    private void btnProductosInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosInicioActionPerformed
-        Productos productos = new Productos();
-        productos.setVisible(true);
-        productos.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnProductosInicioActionPerformed
-
-    private void btnVentasInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasInicioActionPerformed
-        Ventas ventas = new Ventas();
-        ventas.setVisible(true);
-        ventas.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnVentasInicioActionPerformed
+    }//GEN-LAST:event_btnProveedoresInicioActionPerformed
 
     private void btnReportesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesInicioActionPerformed
         Reportes reportes = new Reportes();
@@ -479,9 +433,54 @@ public class Ayuda extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnReportesInicioActionPerformed
 
-    private void btnProveedoresInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresInicioActionPerformed
+    private void btnVentasInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasInicioActionPerformed
+        Ventas ventas = new Ventas();
+        ventas.setVisible(true);
+        ventas.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnVentasInicioActionPerformed
 
-    }//GEN-LAST:event_btnProveedoresInicioActionPerformed
+    private void btnProductosInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosInicioActionPerformed
+        Productos productos = new Productos();
+        productos.setVisible(true);
+        productos.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnProductosInicioActionPerformed
+
+    private void btnClientesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesInicioActionPerformed
+        Clientes clientes = new Clientes();
+        clientes.setVisible(true);
+        clientes.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnClientesInicioActionPerformed
+
+    private void btnInicioInviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioInviActionPerformed
+        InicioInvisoft inicio = new InicioInvisoft();
+        inicio.setVisible(true);
+        inicio.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnInicioInviActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnEnviarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarReporteActionPerformed
+        createEmail();
+        sendEmail();
+    }//GEN-LAST:event_btnEnviarReporteActionPerformed
+
+    private void txtContentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtContentActionPerformed
+
+    private void txtSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSubjectActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSubjectActionPerformed
+
+    private void txtToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtToActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtToActionPerformed
 
     
 

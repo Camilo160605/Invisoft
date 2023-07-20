@@ -30,7 +30,6 @@ public class Cliente implements Serializable{
         this.tel_cliente = tel_cliente;
         this.tipo_Doc_Cliente = tipo_Doc_Cliente;
     }
-
     public int getId_cliente() {
         return id_cliente;
     }

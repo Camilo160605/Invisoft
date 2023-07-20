@@ -12,7 +12,6 @@ import java.util.logging.Logger;
 public class ControladoraPersistencia {
     ClienteJpaController clientejpa = new ClienteJpaController();
     
-
     //CLIENTE
     public void guardar(Cliente cli) {
         clientejpa.create(cli);
@@ -43,7 +42,7 @@ public class ControladoraPersistencia {
     }
 
     //PROVEEDOR
-    ProveedorJpaController proveedorjpa = new ProveedorJpaController(); 
+    ProveedorJpaController proveedorjpa = new ProveedorJpaController();
     
     public void guardarprov(Proveedor prov) {
         proveedorjpa.create(prov);
@@ -76,6 +75,8 @@ public class ControladoraPersistencia {
         return listaUsuario;
         //Select * User       
     }  
+    
+//PRODUCTOS       
     ProductoJpaController producJpa = new ProductoJpaController();
     public void guardarLlanta(Producto llanta) {
         producJpa.create(llanta);

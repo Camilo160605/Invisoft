@@ -111,13 +111,14 @@ public class Controladora {
         return mensaje;
     }
 //PRODUCTOS
-    public void crearLlanta(String refLlanta, String rinLlanta, String fechaLlanta, String marcaLlanta, int precioLlanta) {
+    public void crearLlanta(String refLlanta, String rinLlanta, String fechaLlanta, String marcaLlanta, int precioLlanta,String nombreProveedor) {
         Producto llanta = new Producto();
         llanta.setReferencia(refLlanta);
         llanta.setRin(rinLlanta);
         llanta.setFecha(fechaLlanta);
         llanta.setMarca(marcaLlanta);
         llanta.setPrecio(precioLlanta);
+        llanta.setProveedor(nombreProveedor);
         
         controlPersis.guardarLlanta(llanta);
     }
