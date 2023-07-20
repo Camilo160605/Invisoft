@@ -343,10 +343,7 @@ public class InicioInvisoft extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAyudaInicioActionPerformed
 
     private void btnInicioInviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioInviActionPerformed
-        InicioInvisoft inicio = new InicioInvisoft();
-        inicio.setVisible(true);
-        inicio.setLocationRelativeTo(null);
-        this.dispose();
+       
     }//GEN-LAST:event_btnInicioInviActionPerformed
 
     private void btnClientesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesInicioActionPerformed

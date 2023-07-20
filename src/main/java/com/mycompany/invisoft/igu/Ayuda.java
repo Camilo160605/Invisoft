@@ -200,7 +200,6 @@ public class Ayuda extends javax.swing.JFrame {
         });
 
         btnProveedoresInicio.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnProveedoresInicio.setForeground(new java.awt.Color(0, 0, 255));
         btnProveedoresInicio.setText("Proveedores");
         btnProveedoresInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

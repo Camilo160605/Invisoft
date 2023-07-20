@@ -1,7 +1,7 @@
 package com.mycompany.invisoft;
 
-import com.mycompany.invisoft.igu.LoginInvisoft;
-import com.mycompany.invisoft.igu.Productos;
+//import com.mycompany.invisoft.igu.LoginInvisoft;
+///import com.mycompany.invisoft.igu.Productos;
 import com.mycompany.invisoft.igu.Proveedores;
 
 public class Invisoft {
