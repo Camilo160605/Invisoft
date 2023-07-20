@@ -27,8 +27,8 @@ public class ProductoJpaController implements Serializable {
     }
     private EntityManagerFactory emf = null;
     
-    public ProductoJpaController() {
-        emf = Persistence.createEntityManagerFactory("InvisfotPU");
+    public ProductoJpaController(){
+        emf= Persistence.createEntityManagerFactory("InvisfotPU");
     }
 
     public EntityManager getEntityManager() {

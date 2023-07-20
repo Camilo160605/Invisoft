@@ -1,5 +1,6 @@
 package com.mycompany.invisoft.logica;
 
+import com.mycompany.invisoft.igu.Productos;
 import com.mycompany.invisoft.persistencia.ControladoraPersistencia;
 import java.util.List;
 
@@ -110,13 +111,18 @@ public class Controladora {
         return mensaje;
     }
 
-    public void crearLlanta(String refLlanta, String rinLlanta, String fechaLlanta) {
+    public void crearLlanta(String refLlanta, String rinLlanta, String fechaLlanta, String marcaLlanta) {
         Producto llanta = new Producto();
         llanta.setReferencia(refLlanta);
         llanta.setRin(rinLlanta);
         llanta.setFecha(fechaLlanta);
+        llanta.setMarca(marcaLlanta);
         
         controlPersis.guardarLlanta(llanta);
+    }
+
+    public List<Producto> traerProducto() {
+        return controlPersis.traerProducto();
     }
 
    
