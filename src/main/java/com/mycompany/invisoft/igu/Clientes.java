@@ -237,6 +237,11 @@ public class Clientes extends javax.swing.JFrame {
         jLabel8.setText("Nombre o Razón Social:");
 
         jButton1.setText("Buscar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -459,6 +464,10 @@ public class Clientes extends javax.swing.JFrame {
             mostrarMensaje("No hay nada para eliminar en la tabla","Error","Error al eliminar");
         }
     }//GEN-LAST:event_btnEliminarListaClienteActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
     public void mostrarMensaje (String mensaje,String tipo, String titulo){
                 JOptionPane optionPane = new JOptionPane (mensaje);
                 
