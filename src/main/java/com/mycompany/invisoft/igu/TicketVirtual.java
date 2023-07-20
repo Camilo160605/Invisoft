@@ -1,13 +1,14 @@
+
 package com.mycompany.invisoft.igu;
 
 
 public class TicketVirtual extends javax.swing.JFrame {
 
+
     public TicketVirtual() {
         initComponents();
     }
 
-   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -470,6 +471,13 @@ public class TicketVirtual extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TicketVirtual().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClientesInicio;

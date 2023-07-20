@@ -48,10 +48,6 @@ public class Ayuda extends javax.swing.JFrame {
             mCorreo.setRecipient(Message.RecipientType.TO, new InternetAddress(emailTo));
             mCorreo.setSubject(subject);
             mCorreo.setText(content, "ISO-885-1", "html");           
-
-            mCorreo.setText(content, "ISO-885-1", "html");
-          
-
         } catch (AddressException ex) {
             Logger.getLogger(Ayuda.class.getName()).log(Level.SEVERE, null, ex);
         } catch (MessagingException ex) {
@@ -203,6 +199,7 @@ public class Ayuda extends javax.swing.JFrame {
         });
 
         btnProveedoresInicio.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnProveedoresInicio.setForeground(new java.awt.Color(0, 0, 255));
         btnProveedoresInicio.setText("Proveedores");
         btnProveedoresInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,9 +257,9 @@ public class Ayuda extends javax.swing.JFrame {
                         .addComponent(btnReportesInicio)
                         .addGap(18, 18, 18)
                         .addComponent(btnProveedoresInicio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1)
-                        .addGap(47, 47, 47))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(53, 53, 53)
@@ -340,7 +337,7 @@ public class Ayuda extends javax.swing.JFrame {
         jLabel12.setText("Email:");
 
         txtTo.setEditable(false);
-        txtTo.setText("fbenites612@gmail.com");
+        txtTo.setText("invisoft@gmail.com");
         txtTo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtToActionPerformed(evt);
@@ -425,10 +422,9 @@ public class Ayuda extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnProveedoresInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresInicioActionPerformed
-
-
-    }//GEN-LAST:event_btnProveedoresInicioActionPerformed
+    private void txtSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSubjectActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSubjectActionPerformed
 
     private void txtContentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContentActionPerformed
         // TODO add your handling code here:
@@ -450,45 +446,9 @@ public class Ayuda extends javax.swing.JFrame {
     private void btnInicioInviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioInviActionPerformed
         InicioInvisoft inicio = new InicioInvisoft();
         inicio.setVisible(true);
-        inicio.setLocationRelativeTo(null);       
+        inicio.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnInicioInviActionPerformed
-
-    private void btnClientesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesInicioActionPerformed
-        Clientes clientes = new Clientes();
-        clientes.setVisible(true);
-        clientes.setLocationRelativeTo(null);       
-    }//GEN-LAST:event_btnClientesInicioActionPerformed
-
-    private void btnProductosInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosInicioActionPerformed
-        Productos productos = new Productos();
-        productos.setVisible(true);
-        productos.setLocationRelativeTo(null);
-    }//GEN-LAST:event_btnProductosInicioActionPerformed
-
-    private void btnVentasInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasInicioActionPerformed
-        Ventas ventas = new Ventas();
-        ventas.setVisible(true);
-        ventas.setLocationRelativeTo(null);
-    }//GEN-LAST:event_btnVentasInicioActionPerformed
-    private void btnReportesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesInicioActionPerformed
-        Reportes reportes = new Reportes();
-        reportes.setVisible(true);
-        reportes.setLocationRelativeTo(null);
-    }//GEN-LAST:event_btnReportesInicioActionPerformed
-
-    private void btnVentasInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasInicioActionPerformed
-        Ventas ventas = new Ventas();
-        ventas.setVisible(true);
-        ventas.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnVentasInicioActionPerformed
-
-    private void btnProductosInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosInicioActionPerformed
-        Productos productos = new Productos();
-        productos.setVisible(true);
-        productos.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnProductosInicioActionPerformed
 
     private void btnClientesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesInicioActionPerformed
         Clientes clientes = new Clientes();
@@ -497,38 +457,29 @@ public class Ayuda extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnClientesInicioActionPerformed
 
-    private void btnInicioInviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioInviActionPerformed
-        InicioInvisoft inicio = new InicioInvisoft();
-        inicio.setVisible(true);
-        inicio.setLocationRelativeTo(null);
+    private void btnProductosInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosInicioActionPerformed
+        Productos productos = new Productos();
+        productos.setVisible(true);
+        productos.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnInicioInviActionPerformed
+    }//GEN-LAST:event_btnProductosInicioActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnVentasInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasInicioActionPerformed
+        Ventas ventas = new Ventas();
+        ventas.setVisible(true);
+        ventas.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnVentasInicioActionPerformed
 
-    private void btnEnviarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarReporteActionPerformed
-        createEmail();
-        sendEmail();
-    }//GEN-LAST:event_btnEnviarReporteActionPerformed
-
-    private void txtContentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContentActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtContentActionPerformed
-
-    private void txtSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSubjectActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSubjectActionPerformed
-
-    private void txtToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtToActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtToActionPerformed
+    private void btnReportesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesInicioActionPerformed
+        Reportes reportes = new Reportes();
+        reportes.setVisible(true);
+        reportes.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnReportesInicioActionPerformed
 
     private void btnProveedoresInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresInicioActionPerformed
-        Proveedores proveedores = new Proveedores();
-        proveedores.setVisible(true);
-        proveedores.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_btnProveedoresInicioActionPerformed
 
     

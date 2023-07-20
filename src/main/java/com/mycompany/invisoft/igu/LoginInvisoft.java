@@ -197,6 +197,7 @@ public class LoginInvisoft extends javax.swing.JFrame {
             InicioInvisoft Iniciopapa = new InicioInvisoft();
             Iniciopapa.setVisible(true);
             Iniciopapa.setLocationRelativeTo(null);
+            this.dispose();
         }
         else{
             txtContraUsuario.setText("");
