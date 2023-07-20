@@ -58,6 +58,18 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public Proveedor traerProv(int id_Proveedor) {
+        return proveedorjpa.findProveedor(id_Proveedor);
+    }
+    
+    public void modificarprov(Proveedor prov) {
+        try {
+            proveedorjpa.edit(prov);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
 //USARIOS
     UserJpaController usuJpa = new UserJpaController();
@@ -76,6 +88,9 @@ public class ControladoraPersistencia {
         return listaproduc;
         //Select * User
     }
+
+    
+
     
 
 
