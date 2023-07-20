@@ -93,7 +93,7 @@ public class LoginInvisoft extends javax.swing.JFrame {
             }
         });
 
-        txtContraUsuario.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        txtContraUsuario.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         txtContraUsuario.setText("jPasswordField1");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
