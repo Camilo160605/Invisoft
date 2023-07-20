@@ -11,6 +11,7 @@ C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\p
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\logica\Cliente.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\Principal.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\logica\Controladora.java
+C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\Conexion.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\Clientes.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\LoginInvisoft.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\Productos.java
@@ -18,6 +19,7 @@ C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\p
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\logica\Producto.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\ModificarDatosCliente.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\Ventas.java
+C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\logica\Reportes\ReportesExcel.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\exceptions\PreexistingEntityException.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\ModificarDatosProveedor.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\TicketVirtual.java

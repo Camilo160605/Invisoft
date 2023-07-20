@@ -48,13 +48,23 @@ public class ControladoraPersistencia {
     public void guardarprov(Proveedor prov) {
         proveedorjpa.create(prov);
     }
-        public List<Proveedor> traerProveedor() {
-      return proveedorjpa.findProveedorEntities();
+    public List<Proveedor> traerProveedor() {
+    return proveedorjpa.findProveedorEntities();
     }
     public void borrarProveedor(int id_Proveedor) {
         try {
             proveedorjpa.destroy(id_Proveedor);
         } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    public Proveedor traerProv(int id_Proveedor) {
+        return proveedorjpa.findProveedor(id_Proveedor);
+    }
+    public void modificarprov(Proveedor prov) {
+        try {
+            proveedorjpa.edit(prov);
+        } catch (Exception ex) {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -76,6 +86,10 @@ public class ControladoraPersistencia {
         return listaproduc;
         //Select * User
     }
+
+
+
+    
     
 
 

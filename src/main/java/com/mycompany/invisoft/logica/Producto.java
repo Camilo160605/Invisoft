@@ -23,18 +23,30 @@ public class Producto implements Serializable {
     private String Rin;
     private String Fecha;
     private String Marca;
+    private int Precio;
     //Proveedor provee;
 
     public Producto() {
     }
 
-    public Producto(int id_Llanta,String Referencia, String Rin, String Fecha,String Marca) {
+    public Producto(int id_Llanta,String Referencia, String Rin, String Fecha,String Marca,int Precio ) {
         this.id_Llanta= id_Llanta;
         this.Referencia = Referencia;
         this.Rin = Rin;
         this.Fecha = Fecha;
-        this.Marca=Marca;
+        this.Marca = Marca;
+        this.Precio = Precio;
     }
+
+    public int getPrecio() {
+        return Precio;
+    }
+
+    public void setPrecio(int Precio) {
+        this.Precio = Precio;
+    }
+    
+    
 
     public String getMarca() {
         return Marca;

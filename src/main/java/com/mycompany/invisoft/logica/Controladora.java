@@ -11,7 +11,7 @@ public class Controladora {
         controlPersis = new ControladoraPersistencia();
     }
     
-
+//CLIENTES
     public void guardar(String nombreCliente, String celuCliente, String correoCli, String direcCliente, String docCliente, String tipoDocumentoCliente) {
         Cliente cli = new Cliente();
         cli.setCorreo_cliente(correoCli);
@@ -71,7 +71,7 @@ public class Controladora {
        }
        
     public Proveedor traerProv(int id_Proveedor) {
-     return controlPersis.traerProv (id_Proveedor);
+     return controlPersis.traerProv(id_Proveedor);
     }
     
      public void modificarprov(Proveedor prov, String nombProveedor, String celProveedor, 
@@ -110,13 +110,14 @@ public class Controladora {
         }
         return mensaje;
     }
-
-    public void crearLlanta(String refLlanta, String rinLlanta, String fechaLlanta, String marcaLlanta) {
+//PRODUCTOS
+    public void crearLlanta(String refLlanta, String rinLlanta, String fechaLlanta, String marcaLlanta, int precioLlanta) {
         Producto llanta = new Producto();
         llanta.setReferencia(refLlanta);
         llanta.setRin(rinLlanta);
         llanta.setFecha(fechaLlanta);
         llanta.setMarca(marcaLlanta);
+        llanta.setPrecio(precioLlanta);
         
         controlPersis.guardarLlanta(llanta);
     }
