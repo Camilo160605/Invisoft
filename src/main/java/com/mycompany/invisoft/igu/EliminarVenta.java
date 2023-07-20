@@ -16,12 +16,13 @@ public class EliminarVenta extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTextField12 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        btnProductosInicio = new javax.swing.JButton();
+        btnVentasInicio = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        btnReportesInicio = new javax.swing.JButton();
+        btnProveedoresInicio = new javax.swing.JButton();
+        btnInicioInvi = new javax.swing.JButton();
+        btnClientesInicio = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -53,70 +54,108 @@ public class EliminarVenta extends javax.swing.JFrame {
         jTextField13.setText("Nombre de Usuario");
         jTextField13.setBorder(null);
 
-        jButton4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton4.setText("Inicio");
+        btnProductosInicio.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnProductosInicio.setText("Productos");
+        btnProductosInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProductosInicioActionPerformed(evt);
+            }
+        });
 
-        jButton5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton5.setText("Clientes");
+        btnVentasInicio.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnVentasInicio.setForeground(new java.awt.Color(0, 0, 255));
+        btnVentasInicio.setText("Ventas");
+        btnVentasInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVentasInicioActionPerformed(evt);
+            }
+        });
 
-        jButton6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton6.setText("Productos");
+        jButton10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton10.setText("Ayuda");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
-        jButton7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(0, 0, 255));
-        jButton7.setText("Ventas");
+        btnReportesInicio.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnReportesInicio.setText("Reportes");
+        btnReportesInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReportesInicioActionPerformed(evt);
+            }
+        });
 
-        jButton8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton8.setText("Reportes");
+        btnProveedoresInicio.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnProveedoresInicio.setText("Proveedores");
+        btnProveedoresInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProveedoresInicioActionPerformed(evt);
+            }
+        });
 
-        jButton9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton9.setText("Proveedores");
+        btnInicioInvi.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnInicioInvi.setText("Inicio");
+        btnInicioInvi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInicioInviActionPerformed(evt);
+            }
+        });
+
+        btnClientesInicio.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnClientesInicio.setText("Clientes");
+        btnClientesInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClientesInicioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(41, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton5)
-                                    .addComponent(jButton4)
-                                    .addComponent(jButton6)
-                                    .addComponent(jButton7)
-                                    .addComponent(jButton8)
-                                    .addComponent(jButton9))))
-                        .addGap(0, 36, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(btnClientesInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnProductosInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnVentasInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnReportesInicio)
+                            .addComponent(btnProveedoresInicio)
+                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnInicioInvi, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(33, 33, 33)
                 .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(jButton4)
+                .addGap(45, 45, 45)
+                .addComponent(btnInicioInvi)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(btnClientesInicio)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(btnProductosInicio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnVentasInicio)
                 .addGap(18, 18, 18)
-                .addComponent(jButton7)
+                .addComponent(btnReportesInicio)
                 .addGap(18, 18, 18)
-                .addComponent(jButton8)
+                .addComponent(btnProveedoresInicio)
                 .addGap(18, 18, 18)
-                .addComponent(jButton9)
+                .addComponent(jButton10)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -147,6 +186,11 @@ public class EliminarVenta extends javax.swing.JFrame {
 
         jButton1.setText("CANCELAR VENTA");
         jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 255)));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 255));
 
@@ -274,18 +318,66 @@ public class EliminarVenta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnProductosInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosInicioActionPerformed
+        Productos productos = new Productos();
+        productos.setVisible(true);
+        productos.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnProductosInicioActionPerformed
+
+    private void btnVentasInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasInicioActionPerformed
+        Ventas ventas = new Ventas();
+        ventas.setVisible(true);
+        ventas.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnVentasInicioActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void btnReportesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesInicioActionPerformed
+        Reportes reportes = new Reportes();
+        reportes.setVisible(true);
+        reportes.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnReportesInicioActionPerformed
+
+    private void btnProveedoresInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresInicioActionPerformed
+
+    }//GEN-LAST:event_btnProveedoresInicioActionPerformed
+
+    private void btnInicioInviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioInviActionPerformed
+        InicioInvisoft inicio = new InicioInvisoft();
+        inicio.setVisible(true);
+        inicio.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnInicioInviActionPerformed
+
+    private void btnClientesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesInicioActionPerformed
+        Clientes clientes = new Clientes();
+        clientes.setVisible(true);
+        clientes.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnClientesInicioActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnClientesInicio;
+    private javax.swing.JButton btnInicioInvi;
+    private javax.swing.JButton btnProductosInicio;
+    private javax.swing.JButton btnProveedoresInicio;
+    private javax.swing.JButton btnReportesInicio;
+    private javax.swing.JButton btnVentasInicio;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
