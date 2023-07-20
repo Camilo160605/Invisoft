@@ -428,23 +428,31 @@ public class Proveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_btnProveedoresInicioActionPerformed
 
     private void btnReportesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesInicioActionPerformed
-        // TODO add your handling code here:
+        Reportes reportes = new Reportes();
+        reportes.setVisible(true);
+        reportes.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnReportesInicioActionPerformed
 
     private void btnVentasInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasInicioActionPerformed
         Ventas ventas = new Ventas();
         ventas.setVisible(true);
         ventas.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnVentasInicioActionPerformed
 
     private void btnProductosInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosInicioActionPerformed
-
+        Productos productos = new Productos();
+        productos.setVisible(true);
+        productos.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnProductosInicioActionPerformed
 
     private void btnClientesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesInicioActionPerformed
         Clientes clientes = new Clientes();
         clientes.setVisible(true);
         clientes.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnClientesInicioActionPerformed
 
     private void btnInicioInviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioInviActionPerformed
