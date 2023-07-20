@@ -6,6 +6,9 @@ import com.mycompany.invisoft.igu.InicioInvisoft;
 //import com.mycompany.invisoft.igu.Productos;
 //import com.mycompany.invisoft.igu.Proveedores;
 
+//import com.mycompany.invisoft.igu.LoginInvisoft;
+///import com.mycompany.invisoft.igu.Productos;
+import com.mycompany.invisoft.igu.Proveedores;
 
 public class Invisoft {
     public static void main(String[] args) {
