@@ -3,6 +3,8 @@ package com.mycompany.invisoft.igu;
 import com.mycompany.invisoft.logica.Cliente;
 import com.mycompany.invisoft.logica.Controladora;
 import com.mycompany.invisoft.logica.Producto;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -14,7 +16,6 @@ public class Ventas extends javax.swing.JFrame {
    public Ventas() {
        control = new Controladora();
         initComponents();
-        
     }
 
 
@@ -54,6 +55,7 @@ public class Ventas extends javax.swing.JFrame {
         txtprecioLlanta = new javax.swing.JTextField();
         btnAñadirProducto = new javax.swing.JButton();
         btnBuscarProducto = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -269,6 +271,15 @@ public class Ventas extends javax.swing.JFrame {
             }
         });
 
+        btnEliminar.setBackground(new java.awt.Color(255, 0, 0));
+        btnEliminar.setForeground(new java.awt.Color(242, 242, 242));
+        btnEliminar.setText("Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -318,7 +329,9 @@ public class Ventas extends javax.swing.JFrame {
                 .addComponent(btnBuscarProducto)
                 .addGap(124, 124, 124)
                 .addComponent(btnAñadirProducto)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnEliminar)
+                .addGap(57, 57, 57))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -334,7 +347,9 @@ public class Ventas extends javax.swing.JFrame {
                     .addComponent(txtprecioLlanta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAñadirProducto)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnAñadirProducto)
+                        .addComponent(btnEliminar))
                     .addComponent(btnBuscarProducto))
                 .addGap(12, 12, 12)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -466,17 +481,41 @@ public class Ventas extends javax.swing.JFrame {
         modelo.addRow(datos);
     }//GEN-LAST:event_btnAñadirProductoActionPerformed
 
+
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         suma();
     }//GEN-LAST:event_jTextField3ActionPerformed
 
 
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+  
+        int fila = tablaVentas.getSelectedRow();
+        if (fila > 0){
+            modelo.removeRow(fila);
+        }else{
+            JOptionPane.showMessageDialog(null,"Seleccionar fila");
+        } 
+    }//GEN-LAST:event_btnEliminarActionPerformed
+public void mostrarMensaje (String mensaje,String tipo, String titulo){
+                JOptionPane optionPane = new JOptionPane (mensaje);
+                
+                if(tipo.equals("Info")){
+                optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                }
+                else if (tipo.equals("Error")){
+                optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+                }
+                JDialog dialog = optionPane.createDialog(titulo);
+                dialog.setAlwaysOnTop(true);
+                dialog.setVisible(true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAñadirProducto;
     private javax.swing.JButton btnBuscarNombreCliente;
     private javax.swing.JButton btnBuscarProducto;
     private javax.swing.JButton btnClientesInicio;
+    private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnInicioInvi;
     private javax.swing.JButton btnProductosInicio;
     private javax.swing.JButton btnProveedoresInicio;

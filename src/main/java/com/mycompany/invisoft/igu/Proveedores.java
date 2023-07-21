@@ -218,7 +218,9 @@ public class Proveedores extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel5.setText("Filtro De Busqueda");
 
+        btnEliminarListaProveedor.setBackground(new java.awt.Color(255, 0, 0));
         btnEliminarListaProveedor.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnEliminarListaProveedor.setForeground(new java.awt.Color(242, 242, 242));
         btnEliminarListaProveedor.setText("Eliminar");
         btnEliminarListaProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
