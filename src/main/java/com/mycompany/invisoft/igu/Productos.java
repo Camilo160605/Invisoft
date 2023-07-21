@@ -337,7 +337,7 @@ public class Productos extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tablaProductos;
     // End of variables declaration//GEN-END:variables
-                    private void cargarTablaProductos() {
+private void cargarTablaProductos() {
             //Definir modelo para la tabla
             DefaultTableModel modeloTablaProd = new DefaultTableModel(){
             //Definir que la tabla no sea editable
@@ -361,6 +361,6 @@ public class Productos extends javax.swing.JFrame {
                 }
             tablaProductos.setModel(modeloTablaProd);
 
-        }
+        }        
     }
 

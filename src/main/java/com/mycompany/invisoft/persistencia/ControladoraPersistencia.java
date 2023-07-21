@@ -40,6 +40,12 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public List<Cliente> revisarClientes() {
+        List<Cliente>listaClientes = clientejpa.findClienteEntities();
+                return listaClientes;
+        //Select * User   
+    }
 
     //PROVEEDOR
     ProveedorJpaController proveedorjpa = new ProveedorJpaController();
@@ -87,6 +93,12 @@ public class ControladoraPersistencia {
         return listaproduc;
         //Select * User
     }
+
+    public Producto traerProd(int id_llanta) {
+        return producJpa.findProducto(id_llanta);
+    }
+
+
 
 
 

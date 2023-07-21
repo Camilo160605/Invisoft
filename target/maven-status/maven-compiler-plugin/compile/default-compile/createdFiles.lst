@@ -7,6 +7,7 @@ com\mycompany\invisoft\igu\EliminarVenta$8.class
 com\mycompany\invisoft\igu\ModificarDatosProveedor$6.class
 com\mycompany\invisoft\igu\RegistroProveedor$3.class
 com\mycompany\invisoft\igu\Ayuda$2.class
+com\mycompany\invisoft\igu\Ventas$11.class
 com\mycompany\invisoft\igu\Ayuda.class
 com\mycompany\invisoft\logica\User_.class
 com\mycompany\invisoft\igu\InicioInvisoft$5.class
@@ -25,6 +26,7 @@ com\mycompany\invisoft\igu\Ayuda$8.class
 com\mycompany\invisoft\igu\Proveedores$8.class
 com\mycompany\invisoft\logica\Producto_.class
 com\mycompany\invisoft\igu\ModificarDatosCliente$1.class
+com\mycompany\invisoft\persistencia\VentaDao.class
 com\mycompany\invisoft\igu\Clientes.class
 com\mycompany\invisoft\igu\LoginInvisoft$1.class
 com\mycompany\invisoft\igu\ModificarDatosCliente$4.class
@@ -33,6 +35,7 @@ com\mycompany\invisoft\igu\Clientes$9.class
 com\mycompany\invisoft\igu\Ventas$6.class
 com\mycompany\invisoft\persistencia\ControladoraPersistencia.class
 com\mycompany\invisoft\igu\RegistroProveedor$6.class
+com\mycompany\invisoft\igu\Ventas$9.class
 com\mycompany\invisoft\igu\Productos$6.class
 com\mycompany\invisoft\persistencia\ProveedorJpaController.class
 com\mycompany\invisoft\igu\ModificarDatosProveedor$4.class
@@ -47,6 +50,7 @@ com\mycompany\invisoft\igu\RegistroProveedor$2.class
 com\mycompany\invisoft\igu\Clientes$3.class
 com\mycompany\invisoft\igu\Ventas$5.class
 com\mycompany\invisoft\igu\RegistrarProducto$5.class
+com\mycompany\invisoft\igu\Ventas$10.class
 com\mycompany\invisoft\igu\InicioInvisoft$3.class
 com\mycompany\invisoft\igu\Ayuda$10.class
 com\mycompany\invisoft\igu\EliminarVenta.class
@@ -56,6 +60,7 @@ com\mycompany\invisoft\igu\Ventas.class
 com\mycompany\invisoft\igu\Productos$10.class
 com\mycompany\invisoft\igu\Ayuda$3.class
 com\mycompany\invisoft\igu\ModificarDatosCliente$6.class
+com\mycompany\invisoft\logica\VentasInvi.class
 com\mycompany\invisoft\igu\Clientes$10.class
 com\mycompany\invisoft\igu\Productos$11.class
 com\mycompany\invisoft\igu\EliminarVenta$5.class
@@ -137,7 +142,9 @@ com\mycompany\invisoft\igu\Principal$7.class
 com\mycompany\invisoft\igu\TicketVirtual.class
 com\mycompany\invisoft\logica\Proveedor.class
 com\mycompany\invisoft\igu\InicioInvisoft$1.class
+com\mycompany\invisoft\igu\Ventas$8.class
 com\mycompany\invisoft\igu\Proveedores$6.class
+com\mycompany\invisoft\igu\Ventas$12.class
 com\mycompany\invisoft\igu\InicioInvisoft.class
 com\mycompany\invisoft\igu\RegistroProveedor$4.class
 com\mycompany\invisoft\igu\TicketVirtual$7.class

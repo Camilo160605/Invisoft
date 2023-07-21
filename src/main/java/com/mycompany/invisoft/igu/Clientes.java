@@ -509,8 +509,6 @@ public class Clientes extends javax.swing.JFrame {
                 dialog.setAlwaysOnTop(true);
                 dialog.setVisible(true);
     }
- 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClientesInicio;
     private javax.swing.JButton btnEditarClientes;

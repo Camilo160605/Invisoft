@@ -111,6 +111,8 @@ public class Controladora {
         return mensaje;
     }
 //PRODUCTOS
+
+   
     public void crearLlanta(String refLlanta, String rinLlanta, String fechaLlanta, String marcaLlanta, int precioLlanta,String nombreProveedor) {
         Producto llanta = new Producto();
         llanta.setReferencia(refLlanta);
@@ -126,6 +128,29 @@ public class Controladora {
     public List<Producto> traerProducto() {
         return controlPersis.traerProducto();
     }
+
+    public String revisarCliente(String identificacion) {
+        String mensaje = "";
+        List<Cliente> listaClientes = controlPersis.revisarClientes();
+        for (Cliente cli : listaClientes){
+            if(cli.getDoc_cliente().equals(identificacion)){
+                mensaje = cli.getNom_cliente();
+                return mensaje;
+                }
+//                else if(mensaje.isEmpty()){
+//                    mensaje = "No encontrado";
+//                    return mensaje;
+//                }                       
+        }
+        return mensaje;
+    }
+
+    public Producto traerProd(int id_llanta) {
+        return controlPersis.traerProd(id_llanta);
+    }
+
+
+
 
    
 }   
