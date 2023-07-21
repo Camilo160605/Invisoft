@@ -19,7 +19,7 @@ public class Producto implements Serializable {
     @Id
     @GeneratedValue(strategy =GenerationType.SEQUENCE)
     private int id_Llanta;
-    private String Referencia;
+    private int Referencia;
     private String Rin;
     private String Fecha;
     private String Marca;
@@ -29,7 +29,7 @@ public class Producto implements Serializable {
     public Producto() {
     }
 
-    public Producto(int id_Llanta,String Referencia, String Rin, String Fecha,String Marca,int Precio, String Proveedor) {
+    public Producto(int id_Llanta,int Referencia, String Rin, String Fecha,String Marca,int Precio, String Proveedor) {
         this.id_Llanta= id_Llanta;
         this.Referencia = Referencia;
         this.Rin = Rin;
@@ -75,11 +75,11 @@ public class Producto implements Serializable {
         this.id_Llanta = id_Llanta;
     }
 
-    public String getReferencia() {
+    public int getReferencia() {
         return Referencia;
     }
 
-    public void setReferencia(String Referencia) {
+    public void setReferencia(int Referencia) {
         this.Referencia = Referencia;
     }
 

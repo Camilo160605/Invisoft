@@ -31,7 +31,7 @@ public class RegistrarProducto extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         txtRinLlanta = new javax.swing.JTextField();
-        txtRefLlanta1 = new javax.swing.JTextField();
+        txtRefLlanta = new javax.swing.JTextField();
         txtFechaLlanta = new javax.swing.JTextField();
         txtmarcaLlanta = new javax.swing.JTextField();
         txtPrecioLlanta = new javax.swing.JTextField();
@@ -80,8 +80,8 @@ public class RegistrarProducto extends javax.swing.JFrame {
         txtRinLlanta.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtRinLlanta.setText("####");
 
-        txtRefLlanta1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        txtRefLlanta1.setText("####");
+        txtRefLlanta.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        txtRefLlanta.setText("####");
 
         txtFechaLlanta.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtFechaLlanta.setText("####");
@@ -141,7 +141,7 @@ public class RegistrarProducto extends javax.swing.JFrame {
                             .addComponent(txtPrecioLlanta, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
                             .addComponent(txtmarcaLlanta, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
                             .addComponent(txtFechaLlanta, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-                            .addComponent(txtRefLlanta1, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                            .addComponent(txtRefLlanta, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
                             .addComponent(txtRinLlanta)
                             .addComponent(cmbProveedores, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(52, 52, 52))
@@ -176,7 +176,7 @@ public class RegistrarProducto extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btnvolverProductos)
                 .addGap(33, 33, 33)
-                .addComponent(txtRefLlanta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtRefLlanta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(txtRinLlanta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -215,7 +215,7 @@ public class RegistrarProducto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        txtRinLlanta.setText("");
+        txtRefLlanta.setText("");
         txtRinLlanta.setText("");
         txtFechaLlanta.setText("");
         txtmarcaLlanta.setText("");
@@ -228,7 +228,7 @@ public class RegistrarProducto extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void btnguardarLlantaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarLlantaActionPerformed
-        String refLlanta = txtRinLlanta.getText();
+        Integer refLlanta = Integer.valueOf(txtRefLlanta.getText());
         String rinLlanta = txtRinLlanta.getText();
         String fechaLlanta = txtFechaLlanta.getText();
         String marcaLlanta = txtmarcaLlanta.getText();
@@ -278,7 +278,7 @@ public class RegistrarProducto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JTextField txtFechaLlanta;
     private javax.swing.JTextField txtPrecioLlanta;
-    private javax.swing.JTextField txtRefLlanta1;
+    private javax.swing.JTextField txtRefLlanta;
     private javax.swing.JTextField txtRinLlanta;
     private javax.swing.JTextField txtmarcaLlanta;
     // End of variables declaration//GEN-END:variables

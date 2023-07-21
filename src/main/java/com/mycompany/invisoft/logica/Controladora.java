@@ -77,7 +77,7 @@ public class Controladora {
      public void modificarprov(Proveedor prov, String nombProveedor, String celProveedor, 
         String correoProv, String direcProveedor, String docProveedor, String tipoDocumentoProveedor) {
         
-        prov.setNom_proveedor(nombProveedor);
+       prov.setNom_proveedor(nombProveedor);
        prov.setTel_proveedor(celProveedor);
        prov.setCorreo_proveedor(direcProveedor);
        prov.setDirec_proveedor(direcProveedor);
@@ -113,7 +113,7 @@ public class Controladora {
 //PRODUCTOS
 
    
-    public void crearLlanta(String refLlanta, String rinLlanta, String fechaLlanta, String marcaLlanta, int precioLlanta,String nombreProveedor) {
+    public void crearLlanta(int refLlanta, String rinLlanta, String fechaLlanta, String marcaLlanta, int precioLlanta,String nombreProveedor) {
         Producto llanta = new Producto();
         llanta.setReferencia(refLlanta);
         llanta.setRin(rinLlanta);

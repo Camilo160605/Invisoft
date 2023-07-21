@@ -216,6 +216,11 @@ public class Ventas extends javax.swing.JFrame {
 
         jTextField3.setEditable(false);
         jTextField3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
 
         txtNombreCliente.setEditable(false);
 
@@ -439,34 +444,31 @@ public class Ventas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarNombreClienteActionPerformed
 
     private void txtIdentificacionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdentificacionKeyTyped
-//        char validar = evt.getKeyChar();
-//        
-//        if (Character.isLetter(validar)){
-//            getToolkit().beep();
-//                    evt.consume();
-//                    
-//                    JOptionPane.showMessageDialog(rootPane,"Ingresar Solo Numeros :/");
-//    }
+
     }//GEN-LAST:event_txtIdentificacionKeyTyped
 
     private void btnBuscarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarProductoActionPerformed
             
         int id_llanta = Integer.valueOf(txtIdProducto.getText());
         this.prod = control.traerProd(id_llanta);
-        txtrefLlanta.setText(prod.getReferencia());
+        txtrefLlanta.setText(String.valueOf(prod.getReferencia()));
         txtrinLlanta.setText(prod.getRin());
         txtprecioLlanta.setText(String.valueOf(prod.getPrecio()));             
     }//GEN-LAST:event_btnBuscarProductoActionPerformed
 
     private void btnAñadirProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAñadirProductoActionPerformed
         int id_llanta = Integer.valueOf(txtIdProducto.getText());
-        String referencia = txtrefLlanta.getText();
+        Integer referencia = Integer.parseInt(txtrefLlanta.getText());
         String rin = txtrinLlanta.getText();
         Integer precio = Integer.parseInt(txtprecioLlanta.getText());        
         modelo = (DefaultTableModel) this.tablaVentas.getModel();
         Object datos [] = new Object[]{id_llanta,referencia,rin,precio};
         modelo.addRow(datos);
     }//GEN-LAST:event_btnAñadirProductoActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        suma();
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
 
 
@@ -504,18 +506,16 @@ public class Ventas extends javax.swing.JFrame {
     private javax.swing.JTextField txtrefLlanta;
     private javax.swing.JTextField txtrinLlanta;
     // End of variables declaration//GEN-END:variables
-    private void cargarTabla(){
-//        DefaultTableModel modelo = new DefaultTableModel(){
-//            
-//        //Que filas y Columnas no sean editables
-//        @Override
-//            public boolean isCellEditable(int row, int column){
-//                return false;
-//            }
-//        };
-//        String titulos[] = {"Id Producto","Ref Llanta","Rin Llanta","Precio Llanta"};
-//        modelo.setColumnIdentifiers(titulos);
+
+    
+    public int suma(){
+        int contar = tablaVentas.getRowCount();
+        int suma = 0;
+        for (int i = 0; i < contar; i++) {
+            
+            suma = suma + Integer.parseInt(tablaVentas.getValueAt(i, 3).toString());
+        }
+        return suma;
+        
     }
-
-
 }

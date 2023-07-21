@@ -347,14 +347,14 @@ private void cargarTablaProductos() {
                 }
             };
             //Establecemos nombre de la columna
-            String titulos[]={"Referencia","Rin","Fecha","Marca","Precio","NombreProveedor"};
+            String titulos[]={"Id","Referencia","Rin","Fecha","Marca","Precio","NombreProveedor"};
             modeloTablaProd.setColumnIdentifiers(titulos);
             //traer la lista de productos que tenemos en la BD
             List <Producto> listaproduc = control.traerProducto();              
             //Recorremos la lista y seteamos todos los datos de la BD en la tabla
                 if(listaproduc != null){
                     for(Producto prod : listaproduc){
-                        Object[] objeto = {prod.getReferencia(),prod.getRin(),prod.getFecha(),prod.getMarca(),prod.getPrecio(),prod.getProveedor()};
+                        Object[] objeto = {prod.getId_Llanta(),prod.getReferencia(),prod.getRin(),prod.getFecha(),prod.getMarca(),prod.getPrecio(),prod.getProveedor()};
                         
                         modeloTablaProd.addRow(objeto);
                     }
