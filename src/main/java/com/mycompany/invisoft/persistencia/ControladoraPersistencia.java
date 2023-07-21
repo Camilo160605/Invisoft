@@ -4,6 +4,7 @@ import com.mycompany.invisoft.logica.Cliente;
 import com.mycompany.invisoft.logica.Producto;
 import com.mycompany.invisoft.logica.Proveedor;
 import com.mycompany.invisoft.logica.User;
+import com.mycompany.invisoft.logica.VentasInvi;
 import com.mycompany.invisoft.persistencia.exceptions.NonexistentEntityException;
 import java.util.List;
 import java.util.logging.Level;
@@ -97,6 +98,19 @@ public class ControladoraPersistencia {
     public Producto traerProd(int id_llanta) {
         return producJpa.findProducto(id_llanta);
     }
+//VENTAS
+    VentasInviJpaController ventasjpa = new VentasInviJpaController();
+    public void guardarVentas(VentasInvi ventas) {
+        ventasjpa.create(ventas);
+    }
+
+    public List<VentasInvi> traerVenta() {
+        List<VentasInvi> listaVentas = ventasjpa.findVentasInviEntities();
+        return listaVentas;
+    }
+    
+    
+
 
 
 

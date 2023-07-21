@@ -1,6 +1,5 @@
 package com.mycompany.invisoft.logica;
 
-import com.mycompany.invisoft.igu.Productos;
 import com.mycompany.invisoft.persistencia.ControladoraPersistencia;
 import java.util.List;
 
@@ -149,8 +148,18 @@ public class Controladora {
         return controlPersis.traerProd(id_llanta);
     }
 
+    public void guardarVenta(String nombreCliente, Double suma) {
+        VentasInvi ventas = new VentasInvi();
+        ventas.setCliente(nombreCliente);
+        ventas.setTotal(suma);
+        
+        controlPersis.guardarVentas(ventas);
+        
+    }
 
-
+    public List<VentasInvi> traerVentas() {
+        return controlPersis.traerVenta();
+    }
 
    
 }   

@@ -213,6 +213,11 @@ public class Productos extends javax.swing.JFrame {
         });
 
         btneliminarTablaProductos.setText("Eliminar");
+        btneliminarTablaProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btneliminarTablaProductosActionPerformed(evt);
+            }
+        });
 
         btnRegistrarNuevoProducto.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         btnRegistrarNuevoProducto.setText("Registrar Nuevo Producto");
@@ -314,6 +319,10 @@ public class Productos extends javax.swing.JFrame {
         regProd.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnRegistrarNuevoProductoActionPerformed
+
+    private void btneliminarTablaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarTablaProductosActionPerformed
+                // TODO add your handling code here:
+    }//GEN-LAST:event_btneliminarTablaProductosActionPerformed
 
 
 

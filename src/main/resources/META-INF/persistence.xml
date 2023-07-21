@@ -6,6 +6,7 @@
     <class>com.mycompany.invisoft.logica.User</class>
     <class>com.mycompany.invisoft.logica.Proveedor</class>
     <class>com.mycompany.invisoft.logica.Producto</class>
+    <class>com.mycompany.invisoft.logica.VentasInvi</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bdinvisoft?serverTimezone=UTC"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
