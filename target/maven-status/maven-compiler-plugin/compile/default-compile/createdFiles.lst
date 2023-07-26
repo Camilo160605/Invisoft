@@ -3,12 +3,14 @@ com\mycompany\invisoft\igu\Clientes$11.class
 com\mycompany\invisoft\igu\Clientes$1.class
 com\mycompany\invisoft\igu\Productos$9.class
 com\mycompany\invisoft\igu\LoginInvisoft.class
+com\mycompany\invisoft\igu\Reportes$2.class
 com\mycompany\invisoft\logica\VentasInvi_.class
 com\mycompany\invisoft\igu\EliminarVenta$8.class
 com\mycompany\invisoft\igu\ModificarDatosProveedor$6.class
 com\mycompany\invisoft\igu\RegistroProveedor$3.class
 com\mycompany\invisoft\igu\Ayuda$2.class
 com\mycompany\invisoft\igu\Ventas$11.class
+com\mycompany\invisoft\igu\Reportes$5.class
 com\mycompany\invisoft\igu\Ayuda.class
 com\mycompany\invisoft\logica\User_.class
 com\mycompany\invisoft\igu\InicioInvisoft$5.class
@@ -75,6 +77,7 @@ com\mycompany\invisoft\igu\Clientes$4.class
 com\mycompany\invisoft\igu\TicketVirtual$4.class
 com\mycompany\invisoft\igu\Ayuda$11.class
 com\mycompany\invisoft\igu\AñadirVentas.class
+com\mycompany\invisoft\igu\Reportes$6.class
 com\mycompany\invisoft\igu\Proveedores$3.class
 com\mycompany\invisoft\igu\Ventas$4.class
 com\mycompany\invisoft\igu\InicioInvisoft$4.class
@@ -116,6 +119,7 @@ com\mycompany\invisoft\igu\TicketVirtual$3.class
 com\mycompany\invisoft\logica\Controladora.class
 com\mycompany\invisoft\igu\Productos.class
 com\mycompany\invisoft\logica\Producto.class
+com\mycompany\invisoft\igu\Reportes$4.class
 com\mycompany\invisoft\persistencia\exceptions\IllegalOrphanException.class
 com\mycompany\invisoft\igu\Ayuda$1.class
 com\mycompany\invisoft\igu\Principal$5.class
@@ -158,11 +162,13 @@ com\mycompany\invisoft\igu\InicioInvisoft.class
 com\mycompany\invisoft\igu\RegistroProveedor$4.class
 com\mycompany\invisoft\igu\TicketVirtual$7.class
 com\mycompany\invisoft\igu\Productos$8.class
+com\mycompany\invisoft\igu\Reportes$3.class
 com\mycompany\invisoft\igu\Ayuda$6.class
 com\mycompany\invisoft\igu\DescargarReportes.class
 com\mycompany\invisoft\igu\Clientes$13.class
 com\mycompany\invisoft\igu\ModificarDatosCliente.class
 com\mycompany\invisoft\igu\ModificarDatosCliente$3.class
+com\mycompany\invisoft\igu\RegistrarProducto$7.class
 com\mycompany\invisoft\igu\Ventas$1.class
 com\mycompany\invisoft\igu\Productos$1.class
 com\mycompany\invisoft\igu\Clientes$7.class

@@ -1,6 +1,5 @@
 
 package com.mycompany.invisoft.igu;
-import com.mycompany.invisoft.logica.Cliente;
 import com.mycompany.invisoft.logica.Controladora;
 import com.mycompany.invisoft.logica.VentasInvi;
 import java.util.List;
