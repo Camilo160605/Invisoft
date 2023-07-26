@@ -88,6 +88,11 @@ public class RegistrarProducto extends javax.swing.JFrame {
 
         txtmarcaLlanta.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtmarcaLlanta.setText("####");
+        txtmarcaLlanta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtmarcaLlantaActionPerformed(evt);
+            }
+        });
 
         txtPrecioLlanta.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtPrecioLlanta.setText("####");
@@ -260,6 +265,10 @@ public class RegistrarProducto extends javax.swing.JFrame {
         vista.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnvolverProductosActionPerformed
+
+    private void txtmarcaLlantaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmarcaLlantaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtmarcaLlantaActionPerformed
 
     /**
      * @param args the command line arguments

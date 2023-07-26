@@ -26,7 +26,6 @@ public class Proveedores extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         btnInicioInvi = new javax.swing.JButton();
         btnClientesInicio = new javax.swing.JButton();
@@ -35,6 +34,8 @@ public class Proveedores extends javax.swing.JFrame {
         btnReportesInicio = new javax.swing.JButton();
         btnProveedoresInicio = new javax.swing.JButton();
         btnAyudaInicio = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -62,9 +63,6 @@ public class Proveedores extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel3.setText("INVISOFT");
-
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel4.setText("Nombre de usuario");
 
         jPanel4.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -136,6 +134,11 @@ public class Proveedores extends javax.swing.JFrame {
             }
         });
 
+        jLabel14.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLabel14.setText("Administrador");
+
+        jButton9.setText("Logo");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -159,19 +162,23 @@ public class Proveedores extends javax.swing.JFrame {
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(77, 77, 77))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton9)
+                .addGap(29, 29, 29)
+                .addComponent(jLabel14)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addGap(41, 41, 41)
-                .addComponent(jLabel4)
-                .addGap(91, 91, 91)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(jButton9))
+                .addGap(109, 109, 109)
                 .addComponent(btnInicioInvi)
                 .addGap(18, 18, 18)
                 .addComponent(btnClientesInicio)
@@ -476,7 +483,10 @@ public class Proveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+            RegistroProveedor registrarProv = new RegistroProveedor();
+            registrarProv.setVisible(true);
+            registrarProv.setLocationRelativeTo(null);
+            this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnAyudaInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaInicioActionPerformed
@@ -500,9 +510,10 @@ public class Proveedores extends javax.swing.JFrame {
     private javax.swing.JButton btnVentasInicio;
     private javax.swing.JComboBox<String> cmbTipoDocumento;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

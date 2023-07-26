@@ -89,7 +89,6 @@ public class Ayuda extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         btnInicioInvi = new javax.swing.JButton();
         btnClientesInicio = new javax.swing.JButton();
@@ -97,6 +96,8 @@ public class Ayuda extends javax.swing.JFrame {
         btnVentasInicio = new javax.swing.JButton();
         btnReportesInicio = new javax.swing.JButton();
         btnProveedoresInicio = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -139,15 +140,12 @@ public class Ayuda extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 21, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 564, Short.MAX_VALUE)
         );
-
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel5.setText("Nombre de usuario");
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 255));
@@ -199,13 +197,17 @@ public class Ayuda extends javax.swing.JFrame {
         });
 
         btnProveedoresInicio.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnProveedoresInicio.setForeground(new java.awt.Color(0, 0, 255));
         btnProveedoresInicio.setText("Proveedores");
         btnProveedoresInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProveedoresInicioActionPerformed(evt);
             }
         });
+
+        jLabel14.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLabel14.setText("Administrador");
+
+        jButton9.setText("Logo");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -229,23 +231,28 @@ public class Ayuda extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                    .addContainerGap(62, Short.MAX_VALUE)
-                    .addComponent(jLabel5)
-                    .addGap(16, 16, 16)))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton9)
+                .addGap(29, 29, 29)
+                .addComponent(jLabel14)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(jButton9))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
+                        .addGap(73, 73, 73)
                         .addComponent(btnInicioInvi)
                         .addGap(18, 18, 18)
                         .addComponent(btnClientesInicio)
@@ -257,14 +264,9 @@ public class Ayuda extends javax.swing.JFrame {
                         .addComponent(btnReportesInicio)
                         .addGap(18, 18, 18)
                         .addComponent(btnProveedoresInicio)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1)
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(53, 53, 53)
-                    .addComponent(jLabel5)
-                    .addContainerGap(572, Short.MAX_VALUE)))
+                        .addGap(47, 47, 47))))
         );
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 255));
@@ -337,7 +339,7 @@ public class Ayuda extends javax.swing.JFrame {
         jLabel12.setText("Email:");
 
         txtTo.setEditable(false);
-        txtTo.setText("invisoft@gmail.com");
+        txtTo.setText("fbenites612@gmail.com");
         txtTo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtToActionPerformed(evt);
@@ -495,15 +497,16 @@ public class Ayuda extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

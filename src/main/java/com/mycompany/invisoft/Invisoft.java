@@ -1,19 +1,11 @@
 package com.mycompany.invisoft;
-//
-//import com.mycompany.invisoft.igu.LoginInvisoft;
 
-import com.mycompany.invisoft.igu.Ventas;
-
+import com.mycompany.invisoft.igu.LoginInvisoft;
 
 public class Invisoft {
     public static void main(String[] args) {
-//        LoginInvisoft vista = new LoginInvisoft();
-//        vista.setVisible(true);
-//        vista.setLocationRelativeTo(null);
-
-    Ventas vista = new Ventas();
-    vista.setVisible(true);
-    vista.setLocationRelativeTo(null);
-    
+        LoginInvisoft vista = new LoginInvisoft();
+        vista.setVisible(true);
+        vista.setLocationRelativeTo(null);
     }
 }
