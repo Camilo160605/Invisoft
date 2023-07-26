@@ -1,4 +1,3 @@
-C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\Invisoft.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\exceptions\NonexistentEntityException.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\Reportes.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\InicioInvisoft.java
@@ -15,11 +14,12 @@ C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\l
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\Conexion.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\Clientes.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\LoginInvisoft.java
+C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\VentasInviJpaController.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\Productos.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\ClienteJpaController.java
-C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\VentaDao.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\logica\Producto.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\ModificarDatosCliente.java
+C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\VistaVentas.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\Ventas.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\logica\Reportes\ReportesExcel.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\exceptions\PreexistingEntityException.java
@@ -32,6 +32,7 @@ C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\i
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\ControladoraPersistencia.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\persistencia\ProductoJpaController.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\EliminarVenta.java
+C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\Invisoft.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\logica\VentasInvi.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\logica\Proveedor.java
 C:\Users\CAMILO\Documents\GitHub\Invisoft\src\main\java\com\mycompany\invisoft\igu\RegistroProveedor.java
