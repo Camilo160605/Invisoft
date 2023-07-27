@@ -4,6 +4,8 @@ import com.mycompany.invisoft.logica.Controladora;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 import com.mycompany.invisoft.logica.Producto;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 
 public class Productos extends javax.swing.JFrame {
@@ -276,36 +278,42 @@ public class Productos extends javax.swing.JFrame {
         Proveedores proveedores = new Proveedores();
         proveedores.setVisible(true);
         proveedores.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnProveedoresInicioActionPerformed
 
     private void btnReportesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesInicioActionPerformed
         Reportes reportes = new Reportes();
         reportes.setVisible(true);
         reportes.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnReportesInicioActionPerformed
 
     private void btnVentasInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasInicioActionPerformed
         Ventas ventas = new Ventas();
         ventas.setVisible(true);
         ventas.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnVentasInicioActionPerformed
 
     private void btnProductosInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosInicioActionPerformed
         Productos productos = new Productos();
         productos.setVisible(true);
         productos.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnProductosInicioActionPerformed
 
     private void btnClientesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesInicioActionPerformed
         Clientes clientes = new Clientes();
         clientes.setVisible(true);
         clientes.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnClientesInicioActionPerformed
 
     private void btnInicioInviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioInviActionPerformed
         InicioInvisoft inicio = new InicioInvisoft();
         inicio.setVisible(true);
         inicio.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnInicioInviActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -313,7 +321,28 @@ public class Productos extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btneditarProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarProductosActionPerformed
-        // TODO add your handling code here:
+           //controlo quela tabla no este vacia
+        if (tablaProductos.getRowCount()>0 ) {
+            //controlo que haya seleccionado minimo 1 registro
+            if(tablaProductos.getRowCount()!= -1 ) {
+               
+                //id de la persona a editar
+                int id_Llanta = Integer.parseInt(String.valueOf(tablaProductos.getValueAt(tablaProductos.getSelectedRow(),0)));
+              
+                ModificarDatosProductos modifDatosProd = new ModificarDatosProductos(id_Llanta);
+                modifDatosProd.setVisible(true);
+                modifDatosProd.setLocationRelativeTo(null);
+                this.dispose();
+
+             
+            }
+            else {
+                mostrarMensaje("No seleccionó ningun Proveedor","Error","Error al Eliminar");
+            }
+        }
+        else{
+            mostrarMensaje("No hay nada para eliminar en la tabla","Error","Error al eliminar");
+        }
     }//GEN-LAST:event_btneditarProductosActionPerformed
 
     private void btnRegistrarNuevoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarNuevoProductoActionPerformed
@@ -375,5 +404,20 @@ private void cargarTablaProductos() {
             tablaProductos.setModel(modeloTablaProd);
 
         }        
+
+
+    public void mostrarMensaje (String mensaje,String tipo, String titulo){
+                JOptionPane optionPane = new JOptionPane (mensaje);
+                
+                if(tipo.equals("Info")){
+                optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                }
+                else if (tipo.equals("Error")){
+                optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+                }
+                JDialog dialog = optionPane.createDialog(titulo);
+                dialog.setAlwaysOnTop(true);
+                dialog.setVisible(true);
+    }
     }
 

@@ -474,36 +474,42 @@ public class Clientes extends javax.swing.JFrame {
         Reportes reportes = new Reportes();
         reportes.setVisible(true);
         reportes.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnReportesInicioActionPerformed
 
     private void btnProveedoresInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresInicioActionPerformed
         Proveedores proveedores = new Proveedores();
         proveedores.setVisible(true);
         proveedores.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnProveedoresInicioActionPerformed
 
     private void btnInicioInviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioInviActionPerformed
         InicioInvisoft inicio = new InicioInvisoft();
         inicio.setVisible(true);
         inicio.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnInicioInviActionPerformed
 
     private void btnClientesInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesInicioActionPerformed
         Clientes clientes = new Clientes();
         clientes.setVisible(true);
         clientes.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnClientesInicioActionPerformed
 
     private void btnProductosInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosInicioActionPerformed
         Productos productos = new Productos();
         productos.setVisible(true);
         productos.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnProductosInicioActionPerformed
 
     private void btnVentasInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasInicioActionPerformed
         Ventas ventas = new Ventas();
         ventas.setVisible(true);
         ventas.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnVentasInicioActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

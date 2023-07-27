@@ -15,6 +15,10 @@ import javax.swing.JOptionPane;
 
 
 public class Ayuda extends javax.swing.JFrame {
+    
+    public Ayuda(){
+        initComponents();
+    }
 
     private static String emailFrom = "fbenites612@gmail.com";
     private static String passwordFrom = "dghzngmzoovyviry";
@@ -129,8 +133,7 @@ public class Ayuda extends javax.swing.JFrame {
 
         label1.setText("label1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(600, 800));
+        setMinimumSize(new java.awt.Dimension(500, 500));
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 

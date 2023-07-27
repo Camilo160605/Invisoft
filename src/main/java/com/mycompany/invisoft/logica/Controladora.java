@@ -53,7 +53,7 @@ public class Controladora {
         Proveedor prov = new Proveedor();
         prov.setNom_proveedor(nombProveedor);
         prov.setTel_proveedor(celProveedor);
-        prov.setCorreo_proveedor(direcProveedor);
+        prov.setCorreo_proveedor(correoProv);
         prov.setDirec_proveedor(direcProveedor);
         prov.setDoc_proveedor(docProveedor);
         prov.setTipo_doc_proveedor(tipoDocumentoProveedor);
@@ -78,7 +78,7 @@ public class Controladora {
         
        prov.setNom_proveedor(nombProveedor);
        prov.setTel_proveedor(celProveedor);
-       prov.setCorreo_proveedor(direcProveedor);
+       prov.setCorreo_proveedor(correoProv);
        prov.setDirec_proveedor(direcProveedor);
        prov.setDoc_proveedor(docProveedor);
        prov.setTipo_doc_proveedor(docProveedor);
@@ -159,6 +159,10 @@ public class Controladora {
 
     public List<VentasInvi> traerVentas() {
         return controlPersis.traerVenta();
+    }
+
+    public Producto traerLlanta(int id_Llanta) {
+        return controlPersis.traerProductoM(id_Llanta);
     }
 
    
