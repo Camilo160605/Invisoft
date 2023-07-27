@@ -161,5 +161,9 @@ public class Controladora {
         return controlPersis.traerVenta();
     }
 
+    public Producto traerLlanta(int id_Llanta) {
+        return controlPersis.traerProductoM(id_Llanta);
+    }
+
    
 }   
