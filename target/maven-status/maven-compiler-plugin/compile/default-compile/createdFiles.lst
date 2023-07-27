@@ -1,4 +1,5 @@
 com/mycompany/invisoft/igu/Proveedores$8.class
+com/mycompany/invisoft/igu/ModificarDatosPerfil.class
 com/mycompany/invisoft/logica/Reportes/ReportesExcel.class
 com/mycompany/invisoft/igu/RegistroProveedor$6.class
 com/mycompany/invisoft/igu/VistaVentas$2.class
@@ -27,6 +28,7 @@ com/mycompany/invisoft/igu/Ventas$4.class
 com/mycompany/invisoft/igu/Clientes$5.class
 com/mycompany/invisoft/igu/Productos$10.class
 com/mycompany/invisoft/igu/Reportes$3.class
+com/mycompany/invisoft/igu/Reportes$13.class
 com/mycompany/invisoft/igu/Ventas$12.class
 com/mycompany/invisoft/persistencia/exceptions/IllegalOrphanException.class
 com/mycompany/invisoft/igu/ModificarDatosProductos$2.class
@@ -60,6 +62,7 @@ com/mycompany/invisoft/igu/Ventas$2.class
 com/mycompany/invisoft/igu/Clientes$7.class
 com/mycompany/invisoft/igu/Productos$1.class
 com/mycompany/invisoft/igu/EliminarVenta$4.class
+com/mycompany/invisoft/igu/Perfil$6.class
 com/mycompany/invisoft/igu/Proveedores$9.class
 com/mycompany/invisoft/igu/ModificarDatosCliente$6.class
 com/mycompany/invisoft/igu/VistaVentas$3.class
@@ -96,12 +99,14 @@ com/mycompany/invisoft/igu/RegistroProveedor$4.class
 com/mycompany/invisoft/igu/Clientes$9.class
 com/mycompany/invisoft/igu/DescargarReportes.class
 com/mycompany/invisoft/igu/Ventas$14.class
+com/mycompany/invisoft/igu/InicioInvisoft$8.class
 com/mycompany/invisoft/igu/Proveedores$7.class
 com/mycompany/invisoft/igu/VistaVentas$1.class
 com/mycompany/invisoft/igu/Reportes$10.class
 com/mycompany/invisoft/igu/Reportes.class
 com/mycompany/invisoft/igu/Ventas$10.class
 com/mycompany/invisoft/igu/Reportes$1.class
+com/mycompany/invisoft/igu/ModificarDatosPerfil$4.class
 com/mycompany/invisoft/igu/ModificarDatosCliente$5.class
 com/mycompany/invisoft/igu/Proveedores$5.class
 com/mycompany/invisoft/igu/ModificarDatosProveedor$4.class
@@ -132,6 +137,7 @@ com/mycompany/invisoft/igu/RegistrarProducto$4.class
 com/mycompany/invisoft/igu/ModificarDatosProductos.class
 com/mycompany/invisoft/igu/Proveedores.class
 com/mycompany/invisoft/igu/TicketVirtual$5.class
+com/mycompany/invisoft/igu/ModificarDatosPerfil$5.class
 com/mycompany/invisoft/logica/User.class
 com/mycompany/invisoft/igu/InicioInvisoft$4.class
 com/mycompany/invisoft/igu/ModificarDatosCliente$4.class
@@ -177,9 +183,11 @@ com/mycompany/invisoft/igu/Productos$12.class
 com/mycompany/invisoft/persistencia/Conexion.class
 com/mycompany/invisoft/igu/Clientes$1.class
 com/mycompany/invisoft/igu/VistaVentas$6.class
+com/mycompany/invisoft/igu/ModificarDatosPerfil$3.class
 com/mycompany/invisoft/igu/VistaVentas$9.class
 com/mycompany/invisoft/igu/EliminarVenta.class
 com/mycompany/invisoft/igu/LoginInvisoft$2.class
+com/mycompany/invisoft/igu/ModificarDatosPerfil$2.class
 com/mycompany/invisoft/igu/Ayuda$3.class
 com/mycompany/invisoft/igu/Reportes$6.class
 com/mycompany/invisoft/igu/InicioInvisoft$1.class
@@ -192,6 +200,7 @@ com/mycompany/invisoft/igu/RegistrarProducto$1.class
 com/mycompany/invisoft/igu/TicketVirtual.class
 com/mycompany/invisoft/igu/Clientes$2.class
 com/mycompany/invisoft/igu/VistaVentas$8.class
+com/mycompany/invisoft/igu/ModificarDatosPerfil$1.class
 com/mycompany/invisoft/igu/ModificarDatosProductos$4.class
 com/mycompany/invisoft/igu/Ayuda$2.class
 com/mycompany/invisoft/igu/ModificarDatosCliente$1.class

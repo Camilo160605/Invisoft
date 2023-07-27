@@ -121,9 +121,10 @@ public class ControladoraPersistencia {
         return listaVentas;
     }
 
-   
-
-
+ //PERFIL
+    PerfilJpaController perfiljpa = new PerfilJpaController();
+    
+    
     
     
 

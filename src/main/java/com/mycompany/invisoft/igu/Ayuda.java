@@ -353,7 +353,10 @@ public class Ayuda extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReportesInicioActionPerformed
 
     private void btnProveedoresInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresInicioActionPerformed
-
+        Proveedores vistaprov = new Proveedores();
+        vistaprov.setVisible(true);
+        vistaprov.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnProveedoresInicioActionPerformed
 
     private void txtToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtToActionPerformed

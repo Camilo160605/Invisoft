@@ -45,10 +45,7 @@ public class Controladora {
         cli.setTipo_Doc_Cliente(tipoDocumentoCliente);
         
         controlPersis.modificarCliente(cli);
-        
-        
-        
-        
+   
     } 
     
      public String revisarCliente(String identificacion) {
@@ -172,6 +169,9 @@ public class Controladora {
     public Producto traerLlanta(int id_Llanta) {
         return controlPersis.traerProductoM(id_Llanta);
     }
+    
+    //PERFIL
+    
 
     
    

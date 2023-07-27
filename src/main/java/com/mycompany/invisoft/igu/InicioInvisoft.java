@@ -108,6 +108,11 @@ public class InicioInvisoft extends javax.swing.JFrame {
         jLabel3.setText("INVISOFT");
 
         jButton1.setText("Logo");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -358,6 +363,13 @@ public class InicioInvisoft extends javax.swing.JFrame {
         clientes.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnClientesInicioActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       Perfil per = new Perfil();
+       per.setVisible(true);
+       per.setLocationRelativeTo(null);
+       this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
