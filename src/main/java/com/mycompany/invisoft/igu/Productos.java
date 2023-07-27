@@ -39,6 +39,8 @@ public class Productos extends javax.swing.JFrame {
         btneditarProductos = new javax.swing.JButton();
         btneliminarTablaProductos = new javax.swing.JButton();
         btnRegistrarNuevoProducto = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -148,13 +150,13 @@ public class Productos extends javax.swing.JFrame {
                             .addComponent(btnProductosInicio))
                         .addGap(30, 30, 30)
                         .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGap(760, 760, 760))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton9)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel14)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(748, 748, 748))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,7 +169,7 @@ public class Productos extends javax.swing.JFrame {
                     .addComponent(jButton9))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(73, 73, 73)
@@ -184,14 +186,14 @@ public class Productos extends javax.swing.JFrame {
                         .addComponent(btnProveedoresInicio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1)
-                        .addGap(42, 42, 42))))
+                        .addGap(124, 124, 124))))
         );
 
         javax.swing.GroupLayout jPanel00Layout = new javax.swing.GroupLayout(jPanel00);
         jPanel00.setLayout(jPanel00Layout);
         jPanel00Layout.setHorizontalGroup(
             jPanel00Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel00Layout.setVerticalGroup(
             jPanel00Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -219,6 +221,8 @@ public class Productos extends javax.swing.JFrame {
             }
         });
 
+        btneliminarTablaProductos.setBackground(new java.awt.Color(255, 0, 0));
+        btneliminarTablaProductos.setForeground(new java.awt.Color(242, 242, 242));
         btneliminarTablaProductos.setText("Eliminar");
         btneliminarTablaProductos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -226,13 +230,38 @@ public class Productos extends javax.swing.JFrame {
             }
         });
 
+        btnRegistrarNuevoProducto.setBackground(new java.awt.Color(0, 0, 255));
         btnRegistrarNuevoProducto.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        btnRegistrarNuevoProducto.setText("Registrar Nuevo Producto");
+        btnRegistrarNuevoProducto.setForeground(new java.awt.Color(242, 242, 242));
+        btnRegistrarNuevoProducto.setText("AÑADIR PRODUCTO");
         btnRegistrarNuevoProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarNuevoProductoActionPerformed(evt);
             }
         });
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 255));
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Productos");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -243,30 +272,33 @@ public class Productos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btneditarProductos)
                             .addComponent(btneliminarTablaProductos)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
+                        .addGap(197, 197, 197)
                         .addComponent(btnRegistrarNuevoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel00, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel00, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btneditarProductos)
-                .addGap(18, 18, 18)
-                .addComponent(btneliminarTablaProductos)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btneditarProductos)
+                        .addGap(18, 18, 18)
+                        .addComponent(btneliminarTablaProductos)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRegistrarNuevoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 52, Short.MAX_VALUE))
         );
 
         pack();
@@ -319,7 +351,10 @@ public class Productos extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInicioInviActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       Ayuda vist = new Ayuda();
+       vist.setVisible(true);
+       vist.setLocationRelativeTo(null);
+       this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btneditarProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarProductosActionPerformed
@@ -355,9 +390,37 @@ public class Productos extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarNuevoProductoActionPerformed
 
     private void btneliminarTablaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarTablaProductosActionPerformed
-                // TODO add your handling code here:
+             //controlo quela tabla no este vacia
+        if (tablaProductos.getRowCount()> 0 ) {
+            //controlo que haya seleccionado minimo 1 registro
+            if(tablaProductos.getRowCount()!= -1 ) {
+                int id_Llanta= Integer.parseInt(String.valueOf(tablaProductos.getValueAt(tablaProductos.getSelectedRow(),0)));
+                control.borrarProducto(id_Llanta);
+                
+                mostrarMensaje("Producto eliminado Correctamente c:","Info","Borrado De Cliente");
+                cargarTablaProductos();     
+            }
+            else {
+                mostrarMensaje("No seleccionó ningun Proveedor","Error","Error al Eliminar");
+            }
+        }
+        else{
+            mostrarMensaje("No hay nada para eliminar en la tabla","Error","Error al eliminar");
+        }
     }//GEN-LAST:event_btneliminarTablaProductosActionPerformed
+    public void mostrarMensaje (String mensaje,String tipo, String titulo){
+                    JOptionPane optionPane = new JOptionPane (mensaje);
 
+                    if(tipo.equals("Info")){
+                    optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                    }
+                    else if (tipo.equals("Error")){
+                    optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+                    }
+                    JDialog dialog = optionPane.createDialog(titulo);
+                    dialog.setAlwaysOnTop(true);
+                    dialog.setVisible(true);
+        }
 
 
    
@@ -374,8 +437,10 @@ public class Productos extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel00;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
@@ -407,19 +472,6 @@ private void cargarTablaProductos() {
 
         }        
 
-
-    public void mostrarMensaje (String mensaje,String tipo, String titulo){
-                JOptionPane optionPane = new JOptionPane (mensaje);
-                
-                if(tipo.equals("Info")){
-                optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
-                }
-                else if (tipo.equals("Error")){
-                optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
-                }
-                JDialog dialog = optionPane.createDialog(titulo);
-                dialog.setAlwaysOnTop(true);
-                dialog.setVisible(true);
-    }
-    }
+ 
+}
 

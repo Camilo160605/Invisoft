@@ -128,6 +128,11 @@ public class Ayuda extends javax.swing.JFrame {
         jLabel14.setText("Administrador");
 
         jButton9.setText("Logo");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -215,7 +220,6 @@ public class Ayuda extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setText("Enviar a:");
 
-        txtTo.setBackground(new java.awt.Color(255, 255, 255));
         txtTo.setText("fbenites612@gmail.com");
         txtTo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -237,9 +241,10 @@ public class Ayuda extends javax.swing.JFrame {
         jLabel6.setText("Descripción del problema:");
 
         btnEnviarReporte.setBackground(new java.awt.Color(0, 0, 255));
+        btnEnviarReporte.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnEnviarReporte.setForeground(new java.awt.Color(255, 255, 255));
         btnEnviarReporte.setText("Enviar Reporte");
-        btnEnviarReporte.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 0, 255)));
+        btnEnviarReporte.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnEnviarReporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEnviarReporteActionPerformed(evt);
@@ -276,8 +281,8 @@ public class Ayuda extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(226, 226, 226)
-                        .addComponent(btnEnviarReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(213, 213, 213)
+                        .addComponent(btnEnviarReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -300,10 +305,9 @@ public class Ayuda extends javax.swing.JFrame {
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(btnEnviarReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(104, 104, 104)))
-                .addContainerGap())
+                        .addGap(98, 98, 98))))
         );
 
         pack();
@@ -400,6 +404,10 @@ public class Ayuda extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnEnviarReporteActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     
 

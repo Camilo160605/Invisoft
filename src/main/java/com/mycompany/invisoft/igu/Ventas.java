@@ -278,7 +278,9 @@ public class Ventas extends javax.swing.JFrame {
 
         jLabel6.setText("Precio:");
 
+        btnAñadirProducto.setBackground(new java.awt.Color(0, 0, 255));
         btnAñadirProducto.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnAñadirProducto.setForeground(new java.awt.Color(242, 242, 242));
         btnAñadirProducto.setText("Añadir Producto");
         btnAñadirProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -302,6 +304,8 @@ public class Ventas extends javax.swing.JFrame {
             }
         });
 
+        btnSumarVentas.setBackground(new java.awt.Color(51, 51, 255));
+        btnSumarVentas.setForeground(new java.awt.Color(242, 242, 242));
         btnSumarVentas.setText("Sumar");
         btnSumarVentas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -309,7 +313,9 @@ public class Ventas extends javax.swing.JFrame {
             }
         });
 
+        btnGuardarVenta.setBackground(new java.awt.Color(0, 0, 255));
         btnGuardarVenta.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        btnGuardarVenta.setForeground(new java.awt.Color(242, 242, 242));
         btnGuardarVenta.setText("Guardar Venta");
         btnGuardarVenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -454,7 +460,10 @@ public class Ventas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReportesInicioActionPerformed
 
     private void btnProveedoresInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresInicioActionPerformed
-
+        Proveedores proveedores = new Proveedores();
+        proveedores.setVisible(true);
+        proveedores.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnProveedoresInicioActionPerformed
 
     private void btnInicioInviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioInviActionPerformed
@@ -486,7 +495,10 @@ public class Ventas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVentasInicioActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+       Ayuda vist = new Ayuda();
+       vist.setVisible(true);
+       vist.setLocationRelativeTo(null);
+       this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void txtIdentificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdentificacionActionPerformed
@@ -555,6 +567,11 @@ public class Ventas extends javax.swing.JFrame {
         
         control.guardarVenta(nombreCliente,suma);
         MostrarMensaje("Guardado con exito", "Info", "Guardado Exitoso");
+        
+        Ventas vent = new Ventas ();
+        vent.setVisible(true);
+        vent.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnGuardarVentaActionPerformed
 
     private void btnRevisarVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRevisarVentasActionPerformed

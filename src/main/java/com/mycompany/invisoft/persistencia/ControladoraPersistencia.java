@@ -101,6 +101,15 @@ public class ControladoraPersistencia {
         public Producto traerProductoM(int id_Llanta) {
         return producJpa.findProducto(id_Llanta);
     }
+        
+    public void borrarProducto(int id_Llanta) {
+        try {
+            producJpa.destroy(id_Llanta);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
 //VENTAS
     VentasInviJpaController ventasjpa = new VentasInviJpaController();
     public void guardarVentas(VentasInvi ventas) {
@@ -111,6 +120,8 @@ public class ControladoraPersistencia {
         List<VentasInvi> listaVentas = ventasjpa.findVentasInviEntities();
         return listaVentas;
     }
+
+   
 
 
     

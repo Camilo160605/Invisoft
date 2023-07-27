@@ -37,7 +37,7 @@ public class RegistrarProducto extends javax.swing.JFrame {
         txtPrecioLlanta = new javax.swing.JTextField();
         cmbProveedores = new javax.swing.JComboBox<>();
         btnguardarLlanta = new javax.swing.JButton();
-        btnvolverProductos = new javax.swing.JButton();
+        btnvolverProductos1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -119,10 +119,13 @@ public class RegistrarProducto extends javax.swing.JFrame {
             }
         });
 
-        btnvolverProductos.setText("<-");
-        btnvolverProductos.addActionListener(new java.awt.event.ActionListener() {
+        btnvolverProductos1.setBackground(new java.awt.Color(0, 0, 255));
+        btnvolverProductos1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        btnvolverProductos1.setForeground(new java.awt.Color(242, 242, 242));
+        btnvolverProductos1.setText("<=");
+        btnvolverProductos1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnvolverProductosActionPerformed(evt);
+                btnvolverProductos1ActionPerformed(evt);
             }
         });
 
@@ -163,14 +166,14 @@ public class RegistrarProducto extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnvolverProductos)
+                .addComponent(btnvolverProductos1)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnvolverProductos)
+                .addComponent(btnvolverProductos1)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel16)
                 .addGap(26, 26, 26)
@@ -197,7 +200,7 @@ public class RegistrarProducto extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(cmbProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnguardarLlanta)
                     .addComponent(btnLimpiar))
@@ -229,7 +232,13 @@ public class RegistrarProducto extends javax.swing.JFrame {
         String nombreProveedor = (String) cmbProveedores.getSelectedItem();
 
         control.crearLlanta(refLlanta,rinLlanta,fechaLlanta,marcaLlanta,precioLlanta,nombreProveedor);
+        
         mostrarMensaje("Llanta guardada con exito", "Info", "Guardado con exito");
+        
+        Productos prod =  new Productos();
+        prod.setVisible(true);
+        prod.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnguardarLlantaActionPerformed
 
     private void txtPrecioLlantaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrecioLlantaActionPerformed
@@ -247,24 +256,21 @@ public class RegistrarProducto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtPrecioLlantaKeyTyped
 
-    private void btnvolverProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvolverProductosActionPerformed
-        Productos vista = new Productos();
-        vista.setVisible(true);
-        vista.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnvolverProductosActionPerformed
-
     private void txtmarcaLlantaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmarcaLlantaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtmarcaLlantaActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btnvolverProductos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvolverProductos1ActionPerformed
+        Productos vista = new Productos();
+        vista.setVisible(true);
+        vista.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnvolverProductos1ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnguardarLlanta;
-    private javax.swing.JButton btnvolverProductos;
+    private javax.swing.JButton btnvolverProductos1;
     private javax.swing.JComboBox<String> cmbProveedores;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;

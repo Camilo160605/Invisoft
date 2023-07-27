@@ -47,7 +47,25 @@ public class Controladora {
         controlPersis.modificarCliente(cli);
         
         
+        
+        
     } 
+    
+     public String revisarCliente(String identificacion) {
+        String mensaje = "";
+        List<Cliente> listaClientes = controlPersis.revisarClientes();
+        for (Cliente cli : listaClientes){
+            if(cli.getDoc_cliente().equals(identificacion)){
+                mensaje = cli.getNom_cliente();
+                return mensaje;
+                }
+//                else if(mensaje.isEmpty()){
+//                    mensaje = "No encontrado";
+//                    return mensaje;
+//                }                       
+        }
+        return mensaje;
+    }
 //PROVEEDORES
     public void guardarprov(String nombProveedor, String celProveedor, String correoProv, String direcProveedor, String docProveedor, String tipoDocumentoProveedor) {
         Proveedor prov = new Proveedor();
@@ -127,27 +145,17 @@ public class Controladora {
     public List<Producto> traerProducto() {
         return controlPersis.traerProducto();
     }
-
-    public String revisarCliente(String identificacion) {
-        String mensaje = "";
-        List<Cliente> listaClientes = controlPersis.revisarClientes();
-        for (Cliente cli : listaClientes){
-            if(cli.getDoc_cliente().equals(identificacion)){
-                mensaje = cli.getNom_cliente();
-                return mensaje;
-                }
-//                else if(mensaje.isEmpty()){
-//                    mensaje = "No encontrado";
-//                    return mensaje;
-//                }                       
-        }
-        return mensaje;
-    }
-
+    
     public Producto traerProd(int id_llanta) {
         return controlPersis.traerProd(id_llanta);
     }
+    
+    public void borrarProducto(int id_Llanta) {
+        controlPersis.borrarProducto(id_Llanta);
+    }
 
+
+    ///VENTAS
     public void guardarVenta(String nombreCliente, Double suma) {
         VentasInvi ventas = new VentasInvi();
         ventas.setCliente(nombreCliente);
@@ -165,5 +173,6 @@ public class Controladora {
         return controlPersis.traerProductoM(id_Llanta);
     }
 
+    
    
 }   
