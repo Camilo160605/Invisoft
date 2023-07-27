@@ -25,7 +25,6 @@ public class Ayuda extends javax.swing.JFrame {
     private String emailTo;
     private String subject;
     private String content;
-    
     private Properties mProperties;
     private Session mSession;
     private MimeMessage mCorreo;

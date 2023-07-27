@@ -243,8 +243,13 @@ public class ModificarDatosProductos extends javax.swing.JFrame {
         Integer precioLlanta = Integer.valueOf(txtPrecioLlanta.getText());
         String nombreProveedor = (String) cmbProveedores.getSelectedItem();
 
-        control.crearLlanta(refLlanta,rinLlanta,fechaLlanta,marcaLlanta,precioLlanta,nombreProveedor);
-        mostrarMensaje("Llanta guardada con exito", "Info", "Guardado con exito");
+        control.modificarLlanta(llanta,refLlanta,rinLlanta,fechaLlanta,marcaLlanta,precioLlanta,nombreProveedor);
+        mostrarMensaje("Llanta modificada con exito", "Info", "Modificada con exito");
+        
+        Productos vistaprod = new Productos();
+        vistaprod.setVisible(true);
+        vistaprod.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_guardarCambiosLlantaActionPerformed
 
     private void txtPrecioLlantaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrecioLlantaActionPerformed

@@ -111,7 +111,6 @@ public class Controladora {
     }
 //PRODUCTOS
 
-   
     public void crearLlanta(int refLlanta, String rinLlanta, String fechaLlanta, String marcaLlanta, int precioLlanta,String nombreProveedor) {
         Producto llanta = new Producto();
         llanta.setReferencia(refLlanta);
@@ -143,18 +142,17 @@ public class Controladora {
         }
         return mensaje;
     }
-
+    
     public Producto traerProd(int id_llanta) {
         return controlPersis.traerProd(id_llanta);
     }
-
+    
     public void guardarVenta(String nombreCliente, Double suma) {
         VentasInvi ventas = new VentasInvi();
         ventas.setCliente(nombreCliente);
         ventas.setTotal(suma);
         
         controlPersis.guardarVentas(ventas);
-        
     }
 
     public List<VentasInvi> traerVentas() {
@@ -164,6 +162,16 @@ public class Controladora {
     public Producto traerLlanta(int id_Llanta) {
         return controlPersis.traerProductoM(id_Llanta);
     }
+
+    public void modificarLlanta(Producto llanta, Integer refLlanta, String rinLlanta, String fechaLlanta, String marcaLlanta, Integer precioLlanta, String nombreProveedor) {
+        llanta.setReferencia(refLlanta);
+        llanta.setRin(rinLlanta);
+        llanta.setFecha(fechaLlanta);
+        llanta.setPrecio(precioLlanta);
+        llanta.setProveedor(nombreProveedor);
+        llanta.setReferencia(refLlanta);
+    }
+
 
    
 }   
