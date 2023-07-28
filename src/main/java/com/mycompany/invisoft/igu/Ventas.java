@@ -36,7 +36,8 @@ public class Ventas extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         btnRevisarVentas = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
-        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaVentas = new javax.swing.JTable();
@@ -163,10 +164,22 @@ public class Ventas extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel14.setText("Administrador");
 
-        jButton11.setText("Logo");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        jButton12.setBackground(new java.awt.Color(0, 0, 255));
+        jButton12.setForeground(new java.awt.Color(242, 242, 242));
+        jButton12.setText("Perfil");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jButton13.setBackground(new java.awt.Color(102, 102, 102));
+        jButton13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton13.setForeground(new java.awt.Color(242, 242, 242));
+        jButton13.setText("Cerrar Sesión");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
             }
         });
 
@@ -187,11 +200,12 @@ public class Ventas extends javax.swing.JFrame {
                             .addComponent(btnReportesInicio)
                             .addComponent(btnProveedoresInicio)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton13)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton11)
-                        .addGap(29, 29, 29)
+                        .addGap(23, 23, 23)
+                        .addComponent(jButton12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel14)))
                 .addContainerGap(9, Short.MAX_VALUE))
         );
@@ -203,8 +217,8 @@ public class Ventas extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jButton11))
-                .addGap(67, 67, 67)
+                    .addComponent(jButton12))
+                .addGap(64, 64, 64)
                 .addComponent(btnInicioInvi)
                 .addGap(18, 18, 18)
                 .addComponent(btnClientesInicio)
@@ -218,9 +232,11 @@ public class Ventas extends javax.swing.JFrame {
                 .addComponent(btnProveedoresInicio)
                 .addGap(18, 18, 18)
                 .addComponent(btnRevisarVentas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addComponent(jButton2)
-                .addGap(37, 37, 37))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton13)
+                .addGap(8, 8, 8))
         );
 
         tablaVentas.setModel(new javax.swing.table.DefaultTableModel(
@@ -586,12 +602,19 @@ public class Ventas extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnRevisarVentasActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-       Perfil per = new Perfil();
-       per.setVisible(true);
-       per.setLocationRelativeTo(null);
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        Perfil per = new Perfil();
+        per.setVisible(true);
+        per.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        LoginInvisoft log = new LoginInvisoft();
+       log.setVisible(true);
+       log.setLocationRelativeTo(null);
        this.dispose();
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_jButton13ActionPerformed
 public void mostrarMensaje (String mensaje,String tipo, String titulo){
                 JOptionPane optionPane = new JOptionPane (mensaje);
                 
@@ -620,7 +643,8 @@ public void mostrarMensaje (String mensaje,String tipo, String titulo){
     private javax.swing.JButton btnRevisarVentas;
     private javax.swing.JButton btnSumarVentas;
     private javax.swing.JButton btnVentasInicio;
-    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
