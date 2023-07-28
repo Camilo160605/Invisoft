@@ -45,9 +45,24 @@ public class Controladora {
         cli.setTipo_Doc_Cliente(tipoDocumentoCliente);
         
         controlPersis.modificarCliente(cli);
-        
-        
+   
     } 
+    
+     public String revisarCliente(String identificacion) {
+        String mensaje = "";
+        List<Cliente> listaClientes = controlPersis.revisarClientes();
+        for (Cliente cli : listaClientes){
+            if(cli.getDoc_cliente().equals(identificacion)){
+                mensaje = cli.getNom_cliente();
+                return mensaje;
+                }
+//                else if(mensaje.isEmpty()){
+//                    mensaje = "No encontrado";
+//                    return mensaje;
+//                }                       
+        }
+        return mensaje;
+    }
 //PROVEEDORES
     public void guardarprov(String nombProveedor, String celProveedor, String correoProv, String direcProveedor, String docProveedor, String tipoDocumentoProveedor) {
         Proveedor prov = new Proveedor();
@@ -147,6 +162,12 @@ public class Controladora {
         return controlPersis.traerProd(id_llanta);
     }
     
+    public void borrarProducto(int id_Llanta) {
+        controlPersis.borrarProducto(id_Llanta);
+    }
+
+
+    ///VENTAS
     public void guardarVenta(String nombreCliente, Double suma) {
         VentasInvi ventas = new VentasInvi();
         ventas.setCliente(nombreCliente);
@@ -162,6 +183,9 @@ public class Controladora {
     public Producto traerLlanta(int id_Llanta) {
         return controlPersis.traerProductoM(id_Llanta);
     }
+    
+    //PERFIL
+    
 
     public void modificarLlanta(Producto llanta, Integer refLlanta, String rinLlanta, String fechaLlanta, String marcaLlanta, Integer precioLlanta, String nombreProveedor) {
         llanta.setReferencia(refLlanta);
@@ -171,7 +195,4 @@ public class Controladora {
         llanta.setProveedor(nombreProveedor);
         llanta.setReferencia(refLlanta);
     }
-
-
-   
 }   
