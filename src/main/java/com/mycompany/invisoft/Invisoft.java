@@ -6,7 +6,6 @@ import com.mycompany.invisoft.igu.Productos;
 
 import com.mycompany.invisoft.igu.InicioInvisoft;
 
-
 public class Invisoft {
     public static void main(String[] args) { 
 //    LoginInvisoft VistaLogin = new LoginInvisoft();
