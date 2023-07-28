@@ -116,7 +116,7 @@ public class Perfil extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(19, Short.MAX_VALUE)
                         .addComponent(jButton9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel4))
@@ -189,7 +189,7 @@ public class Perfil extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jTextField3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -201,18 +201,21 @@ public class Perfil extends javax.swing.JFrame {
         jTextField4.setBorder(null);
 
         jTextField5.setEditable(false);
+        jTextField5.setText("1203948214");
 
         jTextField6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jTextField6.setText("Razon Social");
         jTextField6.setBorder(null);
 
         jTextField7.setEditable(false);
+        jTextField7.setText("Llanteria Cucuta");
 
         jTextField8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextField8.setText("DIRECCION");
         jTextField8.setBorder(null);
 
         jTextField9.setEditable(false);
+        jTextField9.setText("Colombia");
 
         jTextField10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jTextField10.setText("Pais");
@@ -233,6 +236,7 @@ public class Perfil extends javax.swing.JFrame {
         });
 
         jTextField12.setEditable(false);
+        jTextField12.setText("Norte de Santander");
 
         jTextField13.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextField13.setText("CONTACTO");
@@ -248,12 +252,14 @@ public class Perfil extends javax.swing.JFrame {
         });
 
         jTextField15.setEditable(false);
+        jTextField15.setText("fandevegetta777@gmail.com");
 
         jTextField16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jTextField16.setText("Nombre");
         jTextField16.setBorder(null);
 
         txtTipoContribuyente.setEditable(false);
+        txtTipoContribuyente.setText("Juridica");
 
         jTextField18.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jTextField18.setText("Tipo de contribuyente");
@@ -264,20 +270,24 @@ public class Perfil extends javax.swing.JFrame {
         jTextField20.setBorder(null);
 
         jTextField21.setEditable(false);
+        jTextField21.setText("Cucuta");
 
         jTextField22.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jTextField22.setText("Domicilio Fiscal");
         jTextField22.setBorder(null);
 
         jTextField23.setEditable(false);
+        jTextField23.setText("Calle 3 av 5 Manzana 21");
 
         jTextField24.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jTextField24.setText("Telefono de contacto");
         jTextField24.setBorder(null);
 
         jTextField25.setEditable(false);
+        jTextField25.setText("3213496213");
 
         jTextField27.setEditable(false);
+        jTextField27.setText("Franco Benitez");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -327,7 +337,7 @@ public class Perfil extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 727, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 743, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)

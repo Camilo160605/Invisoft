@@ -80,7 +80,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" pref="727" max="32767" attributes="0"/>
+          <Component id="jPanel1" pref="743" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -161,7 +161,7 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="19" max="32767" attributes="0"/>
                           <Component id="jButton9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
@@ -364,7 +364,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="28" max="32767" attributes="0"/>
+                  <EmptySpace pref="25" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -414,6 +414,7 @@
     <Component class="javax.swing.JTextField" name="jTextField5">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="1203948214"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField6">
@@ -430,6 +431,7 @@
     <Component class="javax.swing.JTextField" name="jTextField7">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Llanteria Cucuta"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField8">
@@ -446,6 +448,7 @@
     <Component class="javax.swing.JTextField" name="jTextField9">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Colombia"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField10">
@@ -479,6 +482,7 @@
     <Component class="javax.swing.JTextField" name="jTextField12">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Norte de Santander"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField13">
@@ -509,6 +513,7 @@
     <Component class="javax.swing.JTextField" name="jTextField15">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="fandevegetta777@gmail.com"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField16">
@@ -525,6 +530,7 @@
     <Component class="javax.swing.JTextField" name="txtTipoContribuyente">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Juridica"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField18">
@@ -552,6 +558,7 @@
     <Component class="javax.swing.JTextField" name="jTextField21">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Cucuta"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField22">
@@ -568,6 +575,7 @@
     <Component class="javax.swing.JTextField" name="jTextField23">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Calle 3 av 5 Manzana 21"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField24">
@@ -584,11 +592,13 @@
     <Component class="javax.swing.JTextField" name="jTextField25">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="3213496213"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField27">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Franco Benitez"/>
       </Properties>
     </Component>
   </SubComponents>
