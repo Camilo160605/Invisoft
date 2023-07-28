@@ -173,6 +173,11 @@ public class Clientes extends javax.swing.JFrame {
         jLabel4.setText("Administrador");
 
         jButton4.setText("Logo");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -535,6 +540,13 @@ public class Clientes extends javax.swing.JFrame {
         vista.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+       Perfil per = new Perfil();
+       per.setVisible(true);
+       per.setLocationRelativeTo(null);
+       this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
     public void mostrarMensaje (String mensaje,String tipo, String titulo){
                 JOptionPane optionPane = new JOptionPane (mensaje);
                 

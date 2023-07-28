@@ -142,21 +142,21 @@ public class Controladora {
         return controlPersis.traerProducto();
     }
 
-    public String revisarCliente(String identificacion) {
-        String mensaje = "";
-        List<Cliente> listaClientes = controlPersis.revisarClientes();
-        for (Cliente cli : listaClientes){
-            if(cli.getDoc_cliente().equals(identificacion)){
-                mensaje = cli.getNom_cliente();
-                return mensaje;
-                }
+//    public String revisarCliente(String identificacion) {
+//        String mensaje = "";
+//        List<Cliente> listaClientes = controlPersis.revisarClientes();
+//        for (Cliente cli : listaClientes){
+//            if(cli.getDoc_cliente().equals(identificacion)){
+//                mensaje = cli.getNom_cliente();
+//                return mensaje;
+//                }
 //                else if(mensaje.isEmpty()){
 //                    mensaje = "No encontrado";
 //                    return mensaje;
 //                }                       
-        }
-        return mensaje;
-    }
+//        }
+//        return mensaje;
+//    }
     
     public Producto traerProd(int id_llanta) {
         return controlPersis.traerProd(id_llanta);

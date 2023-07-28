@@ -4,9 +4,10 @@ import javax.annotation.processing.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2023-07-27T14:48:28", comments="EclipseLink-2.7.12.v20230209-rNA")
+@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2023-07-27T23:05:07", comments="EclipseLink-2.7.12.v20230209-rNA")
 @StaticMetamodel(Producto.class)
 public class Producto_ { 
+
     public static volatile SingularAttribute<Producto, String> Fecha;
     public static volatile SingularAttribute<Producto, String> Rin;
     public static volatile SingularAttribute<Producto, String> Marca;
@@ -14,4 +15,5 @@ public class Producto_ {
     public static volatile SingularAttribute<Producto, Integer> id_Llanta;
     public static volatile SingularAttribute<Producto, Integer> Referencia;
     public static volatile SingularAttribute<Producto, Integer> Precio;
+
 }

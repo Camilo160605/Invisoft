@@ -164,6 +164,11 @@ public class Ventas extends javax.swing.JFrame {
         jLabel14.setText("Administrador");
 
         jButton11.setText("Logo");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -580,6 +585,13 @@ public class Ventas extends javax.swing.JFrame {
         vista.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnRevisarVentasActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+       Perfil per = new Perfil();
+       per.setVisible(true);
+       per.setLocationRelativeTo(null);
+       this.dispose();
+    }//GEN-LAST:event_jButton11ActionPerformed
 public void mostrarMensaje (String mensaje,String tipo, String titulo){
                 JOptionPane optionPane = new JOptionPane (mensaje);
                 

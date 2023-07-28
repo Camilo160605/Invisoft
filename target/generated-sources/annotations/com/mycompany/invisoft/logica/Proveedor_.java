@@ -3,7 +3,8 @@ package com.mycompany.invisoft.logica;
 import javax.annotation.processing.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
-@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2023-07-27T14:48:28", comments="EclipseLink-2.7.12.v20230209-rNA")
+
+@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2023-07-27T23:05:07", comments="EclipseLink-2.7.12.v20230209-rNA")
 @StaticMetamodel(Proveedor.class)
 public class Proveedor_ { 
 

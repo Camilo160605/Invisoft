@@ -41,13 +41,13 @@ public class Reportes extends javax.swing.JFrame {
         TablaProveedoresReportes = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        btnReportesClientes = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tablaClientesReportes = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnreportesVentas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(2000, 800));
@@ -125,6 +125,11 @@ public class Reportes extends javax.swing.JFrame {
         jLabel14.setText("Administrador");
 
         jButton11.setText("Logo");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -232,10 +237,15 @@ public class Reportes extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Clientes Añadidos");
 
-        jButton4.setBackground(new java.awt.Color(0, 51, 255));
-        jButton4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(242, 242, 242));
-        jButton4.setText("Descargar Reportes");
+        btnReportesClientes.setBackground(new java.awt.Color(0, 51, 255));
+        btnReportesClientes.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnReportesClientes.setForeground(new java.awt.Color(242, 242, 242));
+        btnReportesClientes.setText("Descargar Reportes");
+        btnReportesClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReportesClientesActionPerformed(evt);
+            }
+        });
 
         tablaClientesReportes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -265,7 +275,7 @@ public class Reportes extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(348, 348, 348)
-                        .addComponent(jButton4)))
+                        .addComponent(btnReportesClientes)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -276,7 +286,7 @@ public class Reportes extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
+                .addComponent(btnReportesClientes)
                 .addGap(21, 21, 21))
         );
 
@@ -296,13 +306,13 @@ public class Reportes extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 255));
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(242, 242, 242));
-        jButton1.setText("Descargar Reportes");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnreportesVentas.setBackground(new java.awt.Color(0, 0, 255));
+        btnreportesVentas.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnreportesVentas.setForeground(new java.awt.Color(242, 242, 242));
+        btnreportesVentas.setText("Descargar Reportes");
+        btnreportesVentas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnreportesVentasActionPerformed(evt);
             }
         });
 
@@ -323,7 +333,7 @@ public class Reportes extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(115, 115, 115)
-                                .addComponent(jButton1)
+                                .addComponent(btnreportesVentas)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton3)
                                 .addGap(117, 117, 117))))
@@ -359,7 +369,7 @@ public class Reportes extends javax.swing.JFrame {
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
+                            .addComponent(btnreportesVentas)
                             .addComponent(jButton3))
                         .addGap(18, 18, 18)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -370,12 +380,26 @@ public class Reportes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        ReportesExcel.reporte();
+        ReportesExcel obj;
+        try {
+            obj= new ReportesExcel();
+            obj.exportarExcel(TablaProveedoresReportes);
+            
+        } catch (Exception ex) {
+            System.out.println("Error" + ex);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnreportesVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreportesVentasActionPerformed
+                ReportesExcel obj;
+        try {
+            obj= new ReportesExcel();
+            obj.exportarExcel(TablaVentasReportes);
+            
+        } catch (Exception ex) {
+            System.out.println("Error" + ex);
+        }
+    }//GEN-LAST:event_btnreportesVentasActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
          cargarTablaVentas();
@@ -429,17 +453,35 @@ public class Reportes extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_btnActionPerformed
 
+    private void btnReportesClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesClientesActionPerformed
+        ReportesExcel obj;
+        try {
+            obj= new ReportesExcel();
+            obj.exportarExcel(tablaClientesReportes);
+            
+        } catch (Exception ex) {
+            System.out.println("Error" + ex);
+        }
+    }//GEN-LAST:event_btnReportesClientesActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+       Perfil per = new Perfil();
+       per.setVisible(true);
+       per.setLocationRelativeTo(null);
+       this.dispose();
+    }//GEN-LAST:event_jButton11ActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TablaProveedoresReportes;
     private javax.swing.JTable TablaVentasReportes;
     private javax.swing.JButton btn;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnReportesClientes;
+    private javax.swing.JButton btnreportesVentas;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;

@@ -470,7 +470,10 @@ public class Ayuda extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEnviarReporteActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+       Perfil per = new Perfil();
+       per.setVisible(true);
+       per.setLocationRelativeTo(null);
+       this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     

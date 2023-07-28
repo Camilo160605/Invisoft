@@ -249,13 +249,6 @@ public class ModificarDatosProductos extends javax.swing.JFrame {
         Productos vistaprod = new Productos();
         vistaprod.setVisible(true);
         vistaprod.setLocationRelativeTo(null);
-
-        control.crearLlanta(refLlanta,rinLlanta,fechaLlanta,marcaLlanta,precioLlanta,nombreProveedor);
-        mostrarMensaje("Llanta guardada con exito", "Info", "Guardado con exito");
-        
-        Productos prod =  new Productos();
-        prod.setVisible(true);
-        prod.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_guardarCambiosLlantaActionPerformed
 
